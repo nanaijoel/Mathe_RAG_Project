@@ -1,0 +1,35 @@
+3. Wir betrachten ein dreieckartiges Gebiet, wie im folgendem x-y-Diagramm dargestellt.
+Gemäss Fubini-Satz erhalten wir in diesem Fall
+Z
+G
+f dA =
+Z xE
+x0
+Z g(x)
+y0
+f(x; y) dy dx =
+Z yE
+y0
+Z g−1(y)
+x0
+f(x; y) dx dy.
+(2.89)
+4. Ein komplizierteres Gebiet kann meistens in einfachere Gebiete zerlegt und das Integral
+mit Hilfe des Zerlegungssatzes berechnet werden.
+Bemerkungen:
+i) Bei allen Anwendungen des Fubini-Satzes werden die Zweifach-Integrale in der Reihen-
+folge von innen nach aussen berechnet. Dabei dürfen die Grenzen des inneren Integrals
+von der Integrationsvariablen des äusseren Integrals abhängen.
+ii) Bei der Integration über ein dreieckartiges Gebiet kann die Integrationsreihenfolge auf
+einfache Weise vertauscht werden.
+iii) Es gibt eine Analogie zwischen den Grenzen eines Zweifach-Integrals und den Bewegungen
+des Stifts in einem Plotter.
+Dabei kann man sich vorstellen, dass der Stift des Plotters das Gebiet auf dem Papier
+komplett “überstreichen” muss.
+Inneres Integral
+schnelle hin und her Bewegungen des Stifts entlang des Balkens
+Äusseres Integral
+langsame Bewegung des Balkens entlang des Papiers
+Beim Vertauschen der Integrationsreihenfolge wird das Papier um einen rechten Winkel
+gedreht.
+I-30

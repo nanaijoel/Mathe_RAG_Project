@@ -1,0 +1,75 @@
+Bemerkungen:
+i) Der Stokes-Integralsatz besagt die Gleichheit eines Linienintegrals mit einem Flussinte-
+gral. Es gilt
+Zirkulation von v ≡Summe aller eingeschlossenen Wirbel von v.
+(2.173)
+ii) Der Stokes-Integralsatz kann allgemein in 2D und 3D formuliert werden.
+iii) Der Stokes-Integralsatz ist eine Verallgemeinerung der Newton-Leibniz-Formel in 2D
+bzw. 3D.
+iv) Der Stokes-Integralsatz lässt sich bezogen auf beide Seiten der Gleichung sinnvoll an-
+wenden.
+v) Der Stokes-Integralsatz etabliert die Interpretation der Rotation als Wirbeldichte eines
+Vektorfeldes.
+vi) Gemäss Stokes-Integralsatz verschwindet offenbar die Zirkulation jedes wirbelfreien Vek-
+torfeldes entlang einer beliebigen Randkurve ∂G. Aus rot(v) = 0 folgt
+Υv =
+I
+∂G
+⟨v, ˆe⟩ds =
+Z
+G
+⟨rot(v), ˆn⟩dA =
+Z
+G
+⟨0, ˆn⟩dA =
+Z
+G
+0 dA = 0.
+(2.174)
+Anwendungen:
+• Elektrodynamik: Die Maxwell-Gleichungen für die Rotation des E-Feldes und B-Feldes
+lauten
+rot(E) = −˙B
+(2.175)
+rot(B) = ε0 · µ0 · ˙E + µ0 · J.
+(2.176)
+In einer statischen Situation, d.h. für ˙E = ˙B = 0 vereinfachen sich diese Gleichungen zu
+rot(E) = 0
+(2.177)
+rot(B) = µ0 · J.
+(2.178)
+Für die Zirkulation des E-Feldes und B-Feldes entlang einer beliebigen Randkurve ∂G folgt
+aus dem Stokes-Integralsatz
+ΥE =
+I
+∂G
+⟨E, ˆe⟩ds =
+Z
+G
+⟨rot(E), ˆn⟩dA =
+Z
+G
+⟨0, ˆn⟩dA =
+Z
+G
+0 dA = 0
+(2.179)
+ΥB =
+I
+∂G
+⟨B, ˆe⟩ds =
+Z
+G
+⟨rot(B), ˆn⟩dA =
+Z
+G
+⟨µ0 · J, ˆn⟩dA = µ0
+Z
+G
+⟨J, ˆn⟩dA
+= µ0 · Ieg.
+(2.180)
+• Erhaltungssätze
+• Flächen-Berechnungen
+• Geometrische Analysis
+I-51

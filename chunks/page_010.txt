@@ -1,0 +1,35 @@
+Bemerkungen:
+i) Linear modifizierte Elementar-Integrale machen ca. 90% aller Integrale in Alltag, Natur-
+wissenschaft, Technik und Wirtschaft aus.
+ii) Die Methode der linearen Modifikation ist ein einfacher Spezialfall der allgemeineren Me-
+thode der Substitution.
+Liste mit den wichtigsten linear modifizierten Standard-Integralen:
+•
+Z
+(m · x + q)p dx =
+1
+m · (p + 1) · (m · x + q)p+1 + c
+•
+Z
+am·x+q dx =
+1
+m · ln(a) · am·x+q + c
+•
+Z
+y0 · a
+x−x0
+Σ
+dx =
+Σ
+ln(a) · y0 · a
+x−x0
+Σ
++ c
+•
+Z
+A · sin(ω · t + φ) dt = −A
+ω · cos(ω · t + φ) + c
+1.1.2
+Integration mit Software
+Siehe Demonstrationen mit Python/Numpy & Python/Sympy.
+I-4

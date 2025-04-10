@@ -1,0 +1,127 @@
+6.5
+Eigenwerte & Eigenvektoren
+6.5.1
+Einleitung
+Wir betrachten
+A =
+ 7
+2
+3
+8
+
+,
+u =
+ 2
+1
+
+,
+E1 =
+
+1
+−1
+
+,
+E2 =
+ 2
+3
+
+.
+(6.149)
+Dann gilt
+A · u =
+ 7
+2
+3
+8
+
+·
+ 2
+1
+
+=
+ 7 · 2 + 2 · 1
+3 · 2 + 8 · 1
+
+=
+ 16
+14
+
+(6.150)
+A · E1 =
+ 7
+2
+3
+8
+
+·
+
+1
+−1
+
+=
+ 7 · 1 + 2 · (−1)
+3 · 1 + 8 · (−1)
+
+=
+
+5
+−5
+
+= 5 ·
+
+1
+−1
+
+= 5 · E1
+(6.151)
+A · E2 =
+ 7
+2
+3
+8
+
+·
+ 2
+3
+
+=
+ 7 · 2 + 2 · 3
+3 · 2 + 8 · 3
+
+=
+ 20
+30
+
+= 10 ·
+ 2
+3
+
+= 10 · E2.
+(6.152)
+Beobachtungen: Bei der Wirkung von A auf u fällt nichts besonderes auf. Die Wirkung von A
+auf die Vektoren E1 und E2 ist jedoch eine einfache Streckung um die Faktoren 5 bzw. 10.
+6.5.2
+Definition & Eigenschaften
+Wir machen folgende Definition.
+Definition 6.24
+Eigenwert & Eigenvektor
+Seien n ∈N+ und A ∈M(n, n, R). Ein Vektor E ∈Rn \ {0} heisst Eigenvektor von A zum
+Eigenwert λ ∈R, falls gilt
+A · E = λ · E.
+(6.153)
+Bemerkungen:
+i) Weil A · 0 = 0 für jede Matrix A gilt, zählt 0 ∈Rn nicht als Eigenvektor und wird bei der
+Definition explizit ausgeschlossen. Die Zahl 0 ∈R kann jedoch als Eigenwert auftreten.
+ii) Die Menge aller Eigenwerte einer Matrix A wird Spektrum von A genannt. Man schreibt
+Spec(A) := {λ1, . . . , λm}.
+(6.154)
+iii) Sind E1 und E2 Eigenvektoren von A zum gleichen Eigenwert λ und a, b ∈R, dann gilt
+A · (a · E1 + b · E2) = a · A · E1 + b · A · E2 = a · λ · E1 + b · λ · E2
+= λ · (a · E1 + b · E2).
+(6.155)
+Das heisst auch jede Linearkombination der Form (a · E1 + b · E2) ist wieder Eigenvektor
+von A zum gleichen Eigenwert λ. Die Eigenvektoren zu einem Eigenwert bilden daher
+wieder einen Vektorraum, den sogenannten Eigenraum Ek zum Eigenwert λ.
+iv) Weil alle Vielfache eines Eigenvektors wieder Eigenvektoren zum gleichen Eigenwert sind,
+gibt es zu jedem Eigenwert λk einer Matrix auch einen Einheitseigenvektor ˆEk.
+II-50

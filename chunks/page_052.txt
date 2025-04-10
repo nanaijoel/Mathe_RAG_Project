@@ -1,0 +1,53 @@
+2.5.5
+Rotation
+Wir betrachten die folgende Definition.
+Definition 2.23
+Rotation in 2D
+Sei v : R2 →R2 ein differentierbares Vektorfeld mit Komponenten
+v(x1; x2) =
+ v1(x1; x2)
+v2(x1; x2)
+
+.
+(2.154)
+Die Rotation von v ist
+rot(v) := v2
+,1 −v1
+,2.
+(2.155)
+Wir betrachten die folgende Definition.
+Definition 2.24
+Rotation in 3D
+Sei v : R3 →R3 ein differentierbares Vektorfeld mit Komponenten
+v(x1; x2; x3) =
+
+
+v1(x1; x2; x3)
+v2(x1; x2; x3)
+v3(x1; x2; x3)
+
+.
+(2.156)
+Die Rotation von v ist
+rot(v) :=
+
+
+v3,2 −v2,3
+v1,3 −v3,1
+v2,1 −v1,2
+
+.
+(2.157)
+Bemerkungen:
+i) Die Rotation eines Vektorfeldes ist eine spezielle Konstruktion in 2D und 3D.
+ii) Die Rotation eines Vektorfeldes in 2D ist ein Skalarfeld.
+iii) Die Rotation eines Vektorfeldes in 3D ist ein Vektorfeld in 3D.
+iv) Die Rotation eines Vektorfeldes ist ein Mass für dessen Wirbeldichte.
+v) Ein Vektorfeld v heisst wirbelfrei, falls gilt
+rot(v) = 0.
+(2.158)
+vi) In 3D steht rot(v) senkrecht auf der “Wirbel-Ebene” von v, analog zum Drehimpuls einer
+rotierenden Scheibe.
+vii) Im Englischen wird die Rotation als curl bezeichnet und entsprechend auch so in Formeln
+notiert, d.h. durch curl(v).
+I-46

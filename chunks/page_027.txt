@@ -1,0 +1,48 @@
+ii) Man kann zeigen, dass die Bogenlänge ∆s nicht von der Wahl der Parametrisierung son-
+dern nur von der Bahn abhängt (sofern mehrfache Durchläufe auch mehrfach gerechnet
+werden).
+iii) In 2D und 3D stimmt die Bogenlänge mit dem klassischen Begriff der Weglänge aus der
+Elementargeometrie überein.
+iv) Wählt man für den Kurvenparameter die geometrische Weglänge τ = s entlang der Bahn
+(“Kilometrierung”), dann gilt
+v(s) = 1
+(2.51)
+∆s =
+Z τE
+τ0
+v(τ) dτ =
+Z sE
+s0
+v(s) ds =
+Z sE
+s0
+1 ds = sE −s0.
+(2.52)
+v) In der Praxis lässt sich das Integral in (2.49) nur in einfachen Fällen analytisch berechnen.
+Meistens muss auf numerische Integration zurückgegriffen werden.
+2.2.2
+Linienintegrale
+Wir betrachten eine parametrisierte Kurve im Bereich eines Vektorfeldes. Die Situation ist in
+der folgenden Skizze dargestellt.
+Wir betrachten die folgende Definition.
+Definition 2.9
+Linienintegral
+Seien n ∈N+, τ0, τE ∈R mit τ0 < τE, s : [τ0, τE] →Rn eine parametrisierte Kurve mit Ge-
+schwindigkeitsvektor v(τ) und w : Rn →Rn ein Vektorfeld. Das Linienintegral des Vektorfeldes
+w entlang der Kurve s(τ) ist die reelle Zahl
+I :=
+Z τE
+τ0
+⟨w, v⟩dτ.
+(2.53)
+Bemerkungen:
+i) Die Begriffe Linienintegral und Kurvenintegral sind synonym.
+ii) Für die Masseinheit erhalten wir
+[I ] =
+
+⟨w, v⟩
+
+· [τ ] = [w] · [v] · [τ ] = [w] · [s]
+[τ ] · [τ ] = [w] · [s].
+(2.54)
+I-21

@@ -1,0 +1,57 @@
+2.3.2
+Dreifach-Integrale
+Die Theorie der Integrale in 3D ist ganz analog zur Theorie in 2D. Exemplarisch betrachten
+wir dazu den folgenden Satz.
+Satz 2.7
+Fubini-Satz für Quader
+Seien x0, xE, y0, yE, z0, zE ∈R mit x0 < xE, y0 < yE und z0 < zE, f : R3 →R eine integrierbare
+Funktion sowie Q der Quader
+Q := [x0, xE] × [y0, yE] × [z0, zE].
+(2.90)
+Dann gilt
+Z
+Q
+f dV =
+Z zE
+z0
+Z yE
+y0
+Z xE
+x0
+f(x; y; z) dx dy dz.
+(2.91)
+Bemerkungen:
+i) Durch den Fubini-Satz kann ein Integral über ein Gebiet in 3D auf die Berechnung von
+3 verschachtelten Integralen in 1D zurückgeführt werden und umgekehrt.
+ii) Bei der Anwendung des Fubini-Satzes werden die Dreifach-Integrale in der Reihenfolge
+von innen nach aussen berechnet.
+iii) Bei der Integration über einen Quader kann die Integrationsreihenfolge vertauscht werden.
+Integrale über Gebiete in 3D erhält man aus einem Archimedes-Cauchy-Riemann-Appro-
+ximationsprozess in 3D gemäss folgenden Schritten.
+S1
+Lokal: Der Beitrag zur Grösse I eines kleinen Volumenstücks δV im x-y-z-Raum ist
+δI ≈. . . ≈f(x; y; z) · δV.
+(2.92)
+S2
+Global: Durch Integration über das Gebiet G können wir die gesamte Grösse I berechnen.
+Wir erhalten
+I =
+Z
+G
+f dV = . . . .
+(2.93)
+Anwendungen:
+• Masse: Wir betrachten einen Körpers K mit Dichte ρ : R3 →R.
+S1
+Lokal: Die Masse eines kleinen Volumenstücks δV im x-y-z-Raum ist
+δm ≈ρ · δV = ρ(x; y; z) · δV.
+(2.94)
+S2
+Global: Durch Integration über den Körper K können wir seine gesamte Masse berech-
+nen. Wir erhalten
+m =
+Z
+K
+ρ dV.
+(2.95)
+I-31

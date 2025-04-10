@@ -1,0 +1,55 @@
+2.5
+Mehrfach-Differentiale
+2.5.1
+Partielle Ableitungen
+Wir betrachten die folgende Definition.
+Definition 2.18
+Partielle Ableitung
+Seien n ∈N+ und f : Rn →R eine reellwertige Funktion. Die partiellen Ableitungen von f sind
+die Ableitungen von f nach jeweils einer der n Variablen, wobei die anderen als Konstanten
+betrachtet werden.
+Bemerkungen:
+i) Eine reellwertige Funktion heisst differntierbar, wenn alle partiellen Ableitungen existieren
+und stetig sind.
+ii) Wie die Ableitung in 1D können auch die partiellen Ableitungen in nD mit Hilfe des
+Newton-Differenzenquotienten definiert werden gemäss
+f,µ(x1; x2; . . . ; xn) := lim
+δs→0
+f(x1; x2; . . . ; xµ + δs; . . . ; xn) −f(x1; x2; . . . ; xn)
+δs
+.
+(2.134)
+iii) Für die Masseinheit erhalten wir
+[f,µ] = [f ]
+[xµ] .
+(2.135)
+iv) Die partiellen Ableitungen beschreiben an jedem Punkt die Steigungen des Funktionsgra-
+phen in Richtung der Koordinatenachsen.
+v) In der Literatur sind folgende Schreibweisen gebräuchlich
+f,µ = f,xµ = fxµ = ∂f
+∂xµ
+=
+∂
+∂xµ
+f = ∂µf.
+(2.136)
+2.5.2
+Gradient
+Wir betrachten die folgende Definition.
+Definition 2.19
+Gradient
+Seien n ∈N+ und f : Rn →R eine differentierbare reellwertige Funktion. Der Gradient von f
+ist das Vektorfeld
+∇f :=
+
+
+f,1
+f,2
+...
+f,n
+
+.
+(2.137)
+Bemerkungen:
+i) Der Gradient ist eine allgemeine Konstruktion in nD.
+I-42

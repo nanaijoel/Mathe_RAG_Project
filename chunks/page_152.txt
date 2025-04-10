@@ -1,0 +1,42 @@
+Bemerkungen:
+i) In jedem Fall gilt
+µ(v1; . . . ; vm) ≥0.
+(7.72)
+ii) Weil für ein positiv definites Skalar-Produkt gilt det(G) ≥0, kann der Betrag in diesem
+Fall weggelassen werden.
+iii) Das Mass ist die Verallgemeinerung der Begriffe Länge, Fläche und Volumen auf beliebige
+reelle und komplexe Vektorräume mit Skalar-Produkt. Insbesondere gilt folgendes.
+µ(v) =
+p
+| ⟨v, v⟩| = |v| ≡Länge von v
+(7.73)
+µ(v1; v2) ≡Fläche des von v1 und v2 aufgespannten Parallelogramms
+(7.74)
+µ(v1; v2; v3) ≡Volumen des von v1, v2 und v3 aufgespannten Spats
+(7.75)
+iv) Für m > dim(V ) ist die Gram-Matrix G in jedem Fall singulär und es folgt
+µ(v1; . . . ; vm) = 0.
+(7.76)
+v) Anhand ihres Masses lässt sich beurteilen, ob eine Menge von Vektoren linear abhängig
+oder linear unabhängig ist.
+7.3.1.3
+Eigenschaften reeller Skalar-Produkte
+In diesem Abschnitt betrachten wir ausschliesslich reelle Vektorräume mit Skalar-Produkt. In
+jedem Fall gelten dann binomische Formeln. Wir betrachten dazu den folgenden Satz.
+Satz 7.10
+Binomische Formeln
+Seien (V, R, +, ·) ein reeller Vektorraum mit Skalar-Produkt ⟨., .⟩und v, w ∈V , dann gelten
+die folgenden binomischen Formeln.
+(a) ⟨v + w, v + w⟩= ⟨v, v⟩+ 2 · ⟨v, w⟩+ ⟨w, w⟩
+(b) ⟨v −w, v −w⟩= ⟨v, v⟩−2 · ⟨v, w⟩+ ⟨w, w⟩
+(c) ⟨v + w, v −w⟩= ⟨v, v⟩−⟨w, w⟩
+Beweis: Übung.
+Wir betrachten den folgenden Satz.
+Satz 7.11
+Cauchy-Schwarz-Ungleichung
+Seien (V, R, +, ·) ein reeller Vektorraum mit positiv definitem Skalar-Produkt ⟨., .⟩und v, w ∈
+V , dann gilt die Cauchy-Schwarz-Ungleichung
+⟨v, w⟩
+ ≤|v| · |w|.
+(7.77)
+II-68

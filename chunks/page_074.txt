@@ -1,0 +1,27 @@
+v) Es ist üblich und sinnvoll, vor Anwendung der partiellen Integration die Rollen der Fak-
+toren im Integranden mit Pfeilen zu markieren.
+vi) Beim Aufleiten von h′ 7→h darf eine beliebige Stammfunktion h von h′ verwendet werden.
+Es ist jedoch zwingend nötig, dass auf der rechten Seite in beiden Termen die gleiche
+Stammfunktion h eingesetzt wird!
+vii) Allgemein gilt
+Z
+f(x) dx =
+Z
+↓
+f(x) ·
+↑
+1 dx = f(x) · x −
+Z
+f ′(x) · x dx.
+(3.28)
+Mit Hilfe dieses 1er-Tricks lassen sich u.a. die Stammfunktionen finden von
+f ∈{ln, loga, arcsin, arccos, arctan, arccot, arsinh, arcosh, artanh, arcoth}.
+(3.29)
+Anwendungen:
+• Berechnung von Integralen
+• Taylor-Entwicklungen
+• Differentialgleichungen
+• Variationsrechnung
+• Fourier- und Laplace-Transformation
+• FEM-Simulationen
+I-68

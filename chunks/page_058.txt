@@ -1,0 +1,55 @@
+2.6.3
+Potential-Sätze
+Wir betrachten den folgenden Satz.
+Satz 2.21
+Skalarpotential in 3D
+Seien n ∈{2, 3} und v : Rn →Rn ein differentierbares, wirbelfreies Vektorfeld, dann gibt es ein
+Skalarfeld ϕ : Rn →R, so dass gilt
+v = ∇ϕ.
+(2.181)
+Bemerkungen:
+i) Jedes wirbelfreie Vektorfeld ist ein Gradientenfeld.
+ii) Das Skalarfeld ϕ heisst Skalarpotential oder Potential des Vektorfeldes v.
+iii) Das Skalarpotential ist eine Verallgemeinerung der Stammfunktion auf wirbelfreie Vektor-
+felder in 2D und 3D.
+iv) Für jedes wirbelfreie Vektorfeld v gibt es unendlich viele Möglichkeiten ein Skalarpotential
+zu wählen.
+Wir betrachten den folgenden Satz.
+Satz 2.22
+Vektorpotential in 3D
+Sei v : R3 →R3 ein differentierbares, quellenfreies Vektorfeld, dann gibt es ein Vektorfeld
+A : R3 →R3, so dass gilt
+v = rot(A).
+(2.182)
+Bemerkungen:
+i) Jedes quellenfrei Vektorfeld ist ein Rotationsfeld.
+ii) Das Vektorfeld A heisst Vektorpotential des Vektorfeldes v.
+iii) Das Vektorpotential ist eine Verallgemeinerung der Stammfunktion auf quellenfreie Vek-
+torfelder in 3D.
+iv) Für jedes quellenfreie Vektorfeld v gibt es unendlich viele Möglichkeiten ein Vektorpoten-
+tial zu wählen.
+Anwendungen:
+• Elektrodynamik: Die Maxwell-Gleichungen beschreiben jeweils Divergenz und Rotation des
+E-Feldes und B-Feldes. Es gilt
+div(E) = 1
+ε0
+· ρ
+rot(E) = −˙B
+div(B) = 0
+rot(B) = ε0 · µ0 · ˙E + µ0 · J.
+(2.183)
+In einer statischen Situation, d.h. für ˙E = ˙B = 0 vereinfachen sich diese Gleichungen zu
+div(E) = 1
+ε0
+· ρ
+rot(E) = 0
+div(B) = 0
+rot(B) = µ0 · J.
+(2.184)
+Weil also das E-Feld wirbelfrei und das B-Feld quellenfrei ist, gibt es entsprechend ein Ska-
+larpotential ϕ und ein Vektorpotential A, so dass
+E = −∇ϕ
+und
+B = rot(A).
+(2.185)
+I-52

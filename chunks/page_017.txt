@@ -1,0 +1,39 @@
+Kapitel 2
+Vektoranalysis
+2.1
+Grundlagen
+2.1.1
+Skalarfelder
+2.1.1.1
+Definition
+Wir betrachten die folgende Definition.
+Definition 2.1
+Reellwertige Funktion in mehreren reellen Variablen
+Seien n ∈N+, A ⊆Rn und B ⊆R. Eine Funktion auf A der Form f : A →B heisst reellwertige
+Funktion in n reellen Variablen.
+Bemerkungen:
+i) Die reellen Variablen werden nach dem Funktionsnamen f in runden Klammern aufge-
+zählt, jeweils durch ein Semicolon getrennt.
+n = 1 :
+f(x) = . . .
+(2.1)
+n = 2 :
+f(x; y) = . . .
+(2.2)
+n = 3 :
+f(x; y; z) = . . .
+(2.3)
+allg:
+f(x1; x2; . . . ; xn) = . . .
+(2.4)
+ii) Wird die Definitionsmenge A als Teilmenge eines geometrischen Raumes interpretiert,
+dann wird f als Skalarfeld auf A bezeichnet.
+iii) Im allgemeinen können die reellen Variablen x1, x2, . . . , xn ∈R und der Funktionswert
+f(x1; x2; . . . ; xn) bliebige und auch unterschiedliche Masseinheiten tragen.
+iv) Gilt n ≥2 und enthält die Definitionsmenge A einen auch noch so kleinen Würfel in nD,
+dann kann f nicht injektiv sein.
+v) Aus dem Wert von n kann apriori keine Aussage über die Surjektivität der Funktion
+gemacht werden.
+vi) Der Begriff Beschränktheit lässt sich direkt von 1D auf nD übertragen.
+vii) Der Begriff Monotonie lässt sich nicht von 1D auf nD übertragen.
+I-11

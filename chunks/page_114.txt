@@ -1,0 +1,37 @@
+• Spiegelung an der y-Achse: Sy :=
+ −1
+0
+0
+1
+
+• Spiegelung an der Geraden y = x: Sxy :=
+ 0
+1
+1
+0
+
+• Drehung um den Ursprung um π/2: R(π/2) = i :=
+ 0
+−1
+1
+0
+
+• Drehung um den Ursprung um −π/2: R(−π/2) = −i :=
+
+0
+1
+−1
+0
+
+• Drehung um den Ursprung um φ: R(φ) =
+ cos(φ)
+−sin(φ)
+sin(φ)
+cos(φ)
+
+Die Matrix i, welche die Drehung um den Ursprung um π/2 beschreibt, heisst symplektische
+Matrix. Sie hat analoge algebraische Eigenschaften wie die imaginäre Einheit in den komplexen
+Zahlen. Insbesondere gilt
+i2 = R2(π/2) = R(π/2) · R(π/2) = R(π) = P = −1.
+(6.51)
+II-30

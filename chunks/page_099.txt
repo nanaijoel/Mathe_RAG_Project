@@ -1,0 +1,110 @@
+ii) Addiert oder subtrahiert man zwei reelle Matrizen, dann addiert bzw. subtrahiert man
+ihre Komponenten.
+iii) Die Addition bzw. Subtraktion von zwei reellen Matrizen unterschiedlicher Dimensionen
+ist nicht definiert.
+iv) Beispiel-Codes zur Addition und Subtraktion von Matrizen mit gängiger Software.
+MATLAB/Octave
+M=A+B; M=A-B;
+Mathematica/WolframAlpha
+M=A+B; M=A-B;
+Python/Numpy
+M=A+B; M=A-B;
+Python/Sympy
+M=A+B; M=A-B;
+Beispiele:
+•
+ 2
+−1
+7
+5
+
++
+ 1
+−2
+6
+−5
+
+=
+
+3
+−3
+13
+0
+
+•
+ 2
+−1
+7
+5
+
+−
+ 1
+−2
+6
+−5
+
+=
+ 1
+1
+1
+10
+
+•
+
+0
+1
+
++
+
+−1
+−1
+
+=
+
+−1
+0
+
+6.1.2.2
+Multiplikation mit einem Skalar
+Jede reelle Matrix lässt sich mit einer reellen Zahl multiplizieren.
+Definition 6.3
+Multiplikation mit einem Skalar
+Seien m, n ∈N+, a ∈R und A ∈M(m, n, R), dann ist
+a · A :=
+
+
+a · A11
+a · A12
+. . .
+a · A1n
+a · A21
+a · A22
+. . .
+a · A2n
+...
+...
+...
+...
+a · Am1
+a · Am2
+. . .
+a · Amn
+
+
+.
+(6.6)
+Bemerkungen:
+i) Für alle a ∈R und A ∈M(m, n, R) gilt a · A ∈M(m, n, R).
+ii) Multipliziert man eine reelle Matrix mit einem Skalar, dann multipliziert man ihre Kom-
+ponenten mit dem Skalar.
+iii) Es soll keine Rolle spielen, ob der Skalar links oder rechts der reellen Matrix geschrieben
+wird. Man definiert
+A · a := a · A.
+(6.7)
+iv) Aus der Multiplikation mit einem Skalar ergibt sich auf natürliche Weise eine Division.
+Es soll gelten
+A
+a := 1
+a · A.
+(6.8)
+II-15

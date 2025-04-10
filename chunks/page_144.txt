@@ -1,0 +1,109 @@
+Beispiele:
+• Für jedes n ∈N+ bilden die Standard-Einheitsvektoren
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ˆe1 =
+
+
+1
+0
+0
+...
+0
+
+
+, ˆe2 =
+
+
+0
+1
+0
+...
+0
+
+
+, . . . , ˆen =
+
+
+0
+0
+...
+0
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(7.23)
+eine Basis von Kn, die sogenannte Standard-Basis. Somit folgt
+dim(Kn) = n.
+(7.24)
+• Für jedes n ∈N+ bilden die Monome
+
+1, x, x2, x3, . . . , xn}
+(7.25)
+eine Basis des Polynomraums Pn(R). Somit folgt
+dim(Pn(R)) = n + 1.
+(7.26)
+• Die Funktionenräume C(R) und L2(R) können nicht endlich erzeugt werden und haben daher
+unendliche Dimension.
+Ist in einem Vektorraum (V, K, +, ·) eine Basis B = {e1, . . . , en} gewählt, dann lässt sich jeder
+Vektor eindeutig Linearkombination des Basis-Vektoren schreiben gemäss
+v =
+n
+X
+k=1
+vk · ek.
+(7.27)
+Die Koeffizienten v1, . . . , vn ∈K können wie im Falle der Euklid-Räume Rn in eine Spalten-
+Matrix geschrieben werden, d.h. man identifiziert
+v =
+
+
+v1
+...
+vn
+
+.
+(7.28)
+Die Operationen + und · im Vektorraum lassen sich dann wieder durch die gewohnten Opera-
+tionen in den Komponenten realisieren.
+Beispiel:
+• Wir betrachten den Vektorraum P2(R) der quadratischen Funktionen mit reellen Koeffizienten
+und wählen die Basis {1, x, x2}. Dann identifizieren wir
+f(x) = 3 x2 + 5 x + 7 7→f =
+
+
+7
+5
+3
+
+.
+(7.29)
+II-60

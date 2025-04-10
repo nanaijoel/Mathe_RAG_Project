@@ -1,0 +1,16 @@
+Fall 2: M ist eine Fläche mit geschlossener Randkurve γ. Dann gilt
+ΦJ = I ≡Stromstärke durch die Fläche [A]
+(2.131)
+ΦS = P ≡Leistung durch die Fläche [W ]
+(2.132)
+Uind = ΥE =
+I
+γ
+⟨E, ˆe⟩ds = −
+ Z
+M
+⟨B, ˆn⟩dA
+•
+= −˙ΦB.
+(2.133)
+I-41

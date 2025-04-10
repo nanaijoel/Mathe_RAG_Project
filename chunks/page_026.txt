@@ -1,0 +1,58 @@
+2.2.1.2
+Standard-Parametrisierungen
+Die folgenden Parametrisierungen werden sehr häufig verwendet.
+1. Für Geraden und Strecken in Rn.
+s(τ) = s0 + v · τ
+(2.43)
+s(τ) = s0 + v · (τ −τ0)
+(2.44)
+s(τ) = s0 + (sE −s0) · τ
+für
+τ ∈[0, 1]
+(2.45)
+2. Für einen Kreis in R2 mit Mittelpunkt M und Radius r > 0.
+s(τ) = M +
+ r · cos(τ)
+r · sin(τ)
+
+für
+τ ∈[0, 2π]
+(2.46)
+s(τ) = M +
+ r · cos(ω · τ)
+r · sin(ω · τ)
+
+für
+τ ∈[0, T ]
+mit
+ω = 2π
+T
+(2.47)
+3. Für den Graph einer Funktion f : [x0, xE] →R.
+s(τ) =
+
+τ
+f(τ)
+
+für
+τ ∈[x0, xE]
+(2.48)
+Die Situation ist im folgenden x-y-Diagramm dargestellt.
+2.2.1.3
+Bogenlänge
+Wir betrachten die folgende Definition.
+Definition 2.8
+Bogenlänge
+Seien n ∈N+, τ0, τE ∈R mit τ0 < τE und s : [τ0, τE] →Rn eine parametrisierte Kurve mit
+Bahngeschwindigkeit v(τ). Die Bogenlänge der parametrisierten Kurve ist die reelle Zahl
+∆s :=
+Z τE
+τ0
+v(τ) dτ.
+(2.49)
+Bemerkungen:
+i) Für die Masseinheit erhalten wir
+[∆s] = [v] · [τ ] = [v] · [τ ] = [s]
+[τ ] · [τ ] = [s].
+(2.50)
+I-20

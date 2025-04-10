@@ -1,0 +1,37 @@
+vi) Beispiel-Codes zum Erzeugen von diagonalen Matrizen mit gängiger Software.
+MATLAB/Octave
+M=diag([1,2,3])
+Mathematica/WolframAlpha
+M=DiagonalMatrix[{1,2,3}]
+Python/Numpy
+import numpy as np;
+M=np.diag([1,2,3])
+Python/Sympy
+import sympy as sp;
+M=sp.diag(1,2,3)
+Beispiele:
+•
+
+3
+
+•
+ 1
+0
+0
+2
+
+•
+
+
+−7
+0
+0
+0
+3
+0
+0
+0
+−1
+
+
+II-25

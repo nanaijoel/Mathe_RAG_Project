@@ -1,0 +1,46 @@
+6.2
+Lineare Abbildungen
+6.2.1
+Definition
+Mit Hilfe von Matrizen können geometrische Abbildungen beschrieben werden. Wir machen
+dazu zwei Definitionen.
+Definition 6.13
+Lineare Abbildung - Version 1
+Seien m, n ∈N+ und A ∈M(n, m, R). Eine Abbildung der Form
+a : Rm
+→Rn
+x
+7→a(x) := A · x
+(6.32)
+heisst lineare Abbildung.
+Definition 6.14
+Lineare Abbildung - Version 2
+Seien m, n ∈N+. Eine lineare Abbildung ist eine Abbildung des Typs a : Rm →Rn mit der
+Eigenschaft, dass für alle v, w ∈Rm und x, y ∈R gilt
+a(x · v + y · w) = x · a(v) + y · a(w).
+(6.33)
+Bemerkungen:
+i) Die beiden Definitionen sind äquivalent. Es ist leicht einzusehen, dass die linearen Abbil-
+dungen gemäss Definition 6.13 die Haupteigenschaft (6.33) aus Definition 6.14 erfüllen.
+Es gilt
+a(x · v + y · w) = A · (x · v + y · w) = A · x · v + A · y · w = x · A · v + y · A · w
+= x · a(v) + y · a(w).
+(6.34)
+ii) Die Matrix A, welche gemäss Definition 6.13 eine lineare Abbildung a beschreibt, wird
+Abbildungsmatrix genannt.
+iii) Ist die Abbildungsmatrix A quadratisch, d.h. m = n, dann ist a eine Selbstabbildung des
+Typs a : Rn →Rn.
+iv) Bekannte geometrische Abbildungen wie Streckungen, Projektionen, Spiegelungen und Ro-
+tationen sind lineare Abbildungen, welche jeweils durch eine Abbildungsmatrix ausgedrückt
+werden können.
+v) Für alle linearen Abbildungen gilt offensichtlich
+a(0) = A · 0 = 0.
+(6.35)
+vi) Für n = m = 1 gibt es eine historisch bedingte Begriffskollision zwischen einer linearen
+Funktion in der Analysis und einer linearen Abbildung in der linearen Algebra.
+Analysis:
+f(x) = m · x + q
+Lineare Algebra:
+a(x) = A · x.
+(6.36)
+II-26

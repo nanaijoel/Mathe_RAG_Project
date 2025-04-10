@@ -1,0 +1,15 @@
+• Trägheitsmoment: Wir betrachten einen Körpers K mit Dichte ρ : R3 →R. Der Abstand
+eines Punktes von einer vorgegebenen Drehachse sei r : R3 →R.
+S1
+Lokal: Das Trägheitsmoment eines kleinen Volumenstücks δV im x-y-z-Raum ist
+δI ≈r2 · δm ≈r2 · ρ · δV = r2(x; y; z) · ρ(x; y; z) · δV.
+(2.96)
+S2
+Global: Durch Integration über den Körper K können wir sein gesamtes Trägheitsmo-
+ment berechnen. Wir erhalten
+I =
+Z
+K
+r2 · ρ dV.
+(2.97)
+I-32

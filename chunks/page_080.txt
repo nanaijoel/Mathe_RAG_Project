@@ -1,0 +1,62 @@
+= f(0)
+0!
++ f ′(0)
+1!
+· x + f ′′(0)
+2!
+· x2 + . . . + f (n)(0)
+n!
+· xn + (−1)n
+n!
+Z x
+0
+f (n+1)(s) · (s −x)n ds
+= Tn(x) + Rn(x).
+(4.4)
+Damit haben den Satz bewiesen.
+Besonders interessant ist die Situation, wenn das Restglied für grosse n immer kleiner wird.
+Dazu betrachten wir die folgende Definition.
+Definition 4.1
+Analytische Funktion
+Seien I ⊆R ein Intervall mit 0 ∈I und f : I →R eine unendlich oft differentierbare Funktion.
+Die Funktion f heisst analytisch auf I, falls für alle x ∈I gilt
+lim
+n→∞Rn(x) = 0.
+(4.5)
+Bemerkungen:
+i) Das Maclaurin-Polynom Tn(x) ist ein Polynom vom Grad n.
+ii) Um das Maclaurin-Polynom Tn(x) aufzustellen, müssen die Funktionswerte von f und
+ihren Ableitungen nur an der Stelle x = 0 bekannt sein.
+iii) Eine analytische Funktion lässt sich durch ihre Maclaurin-Reihe vollständig darstellen,
+d.h. für alle x ∈I gilt
+f(x) = lim
+n→∞Tn(x) =
+∞
+X
+k=0
+f (k)(0)
+k!
+· xk.
+(4.6)
+iv) In jedem Fall, d.h. auch für nicht analytische Funktionen kann das Maclaurin-Polynom
+in der Nähe von x = 0 als Näherung für f verwendet werden, d.h. für x nahe genug bei 0
+und n gross genug gilt zumindest
+f(x) = Tn(x) + Rn(x) ≈Tn(x).
+(4.7)
+v) Hat f eine Parität, dann hat das Maclaurin-Polynom die gleiche Parität. In jedem Fall
+gilt
+f hat positive Parität ⇔Tn(x) enthält nur gerade Potenzen von x,
+(4.8)
+f hat negative Parität ⇔Tn(x) enthält nur ungerade Potenzen von x.
+(4.9)
+vi) Ist f selbst ein Polynom vom Grad p ∈N, dann ist f auf ganz R analytisch und es gilt
+Tn(x) = f(x)
+für alle n ≥p.
+(4.10)
+vii) Beispiel-Codes zur Berechnung von Maclaurin-Entwicklungen mit gängiger Software.
+Mathematica/WolframAlpha
+Series[Exp[x],{x,0,n}]
+Python/Sympy
+import sympy as sp;
+sp.series(sp.exp(x),x,0,n+1);
+I-74

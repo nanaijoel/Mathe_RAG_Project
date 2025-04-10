@@ -1,0 +1,20 @@
+1.2.4.4
+Volumen
+Wir betrachten einen Körper mit veränderlichem Querschnitt A(x). Die Situation ist in der
+folgenden Sizze dargestellt.
+Um das Volumen des Körpers zu berechnen, verwenden wir einen Archimedes-Cauchy-
+Riemann-Approximationsprozess. Dabei gehen wir nach folgenden Schritten vor.
+S1
+Lokal: Wir betrachten eine kleine Teilstück des Körpers an der Position x mit Querschnitt-
+fläche A(x) und Länge δx. Das Volumen des Teilstücks beträgt
+δV ≈A(x) · δx.
+(1.18)
+S2
+Global: Durch Integration über x können wir das gesamte Volumen des Körpers berechnen.
+Wir erhalten
+V =
+Z xE
+x0
+A(x) dx = . . . .
+(1.19)
+I-9

@@ -1,0 +1,45 @@
+2.6
+Hauptsätze der Vektoranalysis
+2.6.1
+Gauss-Integralsatz
+Wir betrachten einen Körper K ⊂R3 mit Oberfläche ∂K, äusserem Einheitsnormalen-Vektorfeld
+ˆn im Bereich eines Vektorfeldes v : R3 →R3. Die Situation ist in der folgenden Skizze darge-
+stellt.
+Wir betrachten den folgenden Satz.
+Satz 2.19
+Gauss-Integralsatz in 3D
+Seien K ⊂R3 ein Körper mit Oberfläche ∂K, äusserem Einheitsnormalen-Vektorfeld ˆn im
+Bereich eines differentierbaren Vektorfeldes v : R3 →R3, dann gilt
+I
+∂K
+⟨v, ˆn⟩dA = Φv =
+Z
+K
+div(v) dV.
+(2.165)
+Bemerkungen:
+i) Der Gauss-Integralsatz besagt die Gleichheit eines Flussintegrals mit einem Volumenin-
+tegral. Es gilt
+Perforation von v ≡Summe aller eingeschlossenen Quellen von v.
+(2.166)
+ii) Der Gauss-Integralsatz kann allgemein in nD formuliert werden.
+iii) Der Gauss-Integralsatz ist eine Verallgemeinerung der Newton-Leibniz-Formel in nD.
+iv) Der Gauss-Integralsatz lässt sich bezogen auf beide Seiten der Gleichung sinnvoll anwen-
+den.
+v) Der Gauss-Integralsatz etabliert die Interpretation der Divergenz als Quellendichte eines
+Vektorfeldes.
+vi) Gemäss Gauss-Integralsatz verschwindet offenbar die Perforation jedes quellenfreien Vek-
+torfeldes durch eine beliebige Oberfläche ∂V . Aus div(v) = 0 folgt
+Φv =
+I
+∂K
+⟨v, ˆn⟩dA =
+Z
+K
+div(v) dV =
+Z
+K
+0 dV = 0.
+(2.167)
+Damit haben wir auch den Spezialfall aus Satz 2.11 bewiesen.
+I-49

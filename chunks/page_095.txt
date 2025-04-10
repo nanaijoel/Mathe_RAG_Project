@@ -1,0 +1,45 @@
+Die Lösungsmenge ist daher
+L =
+
+3 · ei· π
+3 , −3, 3 · e−i· π
+3 	
+.
+(5.41)
+Die Lösungen bilden ein gleichseitiges Dreieck in der Gauss-Ebene.
+Wir betrachten den folgenden Satz.
+Satz 5.7
+Lösungen von Potenz-Gleichungen
+Seien w, z ∈C, n ∈N+, r, φ ∈R mit r > 0 und z erfülle die Potenz-Gleichung
+zn = w = r · ei·φ.
+(5.42)
+Dann gilt folgendes.
+(a) Für w = 0 hat (5.42) genau eine Lösung für z, nämlich
+z = 0.
+(5.43)
+(b) Für w ̸= 0 hat (5.42) genau n Lösungen für z, nämlich
+zk =
+n√r · ei· φ+(k−1)·2π
+n
+für
+k ∈{1, . . . , n}.
+(5.44)
+Bemerkungen:
+i) Die Tatsache, dass (5.42) ausser für w = 0 genau n Lösungen hat, wird als algebraische
+Vollständigkeit oder algebraische Abgeschlossenheit von C bezeichnet.
+ii) Für alle Lösungen von (5.42) gilt
+|zk| =
+n√r =
+np
+|w| .
+(5.45)
+Die Lösungen liegen in der Gauss-Ebene daher auf dem Kreis um den Ursprung mit
+Radius
+np
+|w|.
+iii) Zwischen zwei benachbarten Lösungen von (5.42) liegt jeweils ein Winkel von
+∆φ = 2π
+n .
+(5.46)
+iv) Die Lösungen von (5.42) bilden ein reguläres n-Eck in der Gauss-Ebene.
+II-11

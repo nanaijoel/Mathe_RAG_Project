@@ -1,0 +1,33 @@
+5.2
+Gauss-Ebene
+5.2.1
+Elementare Entsprechungen
+Wir betrachten das folgende Diagramm.
+Bemerkungen:
+i) Die Re-Achse entspricht den reellen Zahlen.
+ii) Die Gauss-Ebene entspricht den komplexen Zahlen gemäss
+x + y · i ←→
+ x
+y
+
+.
+(5.15)
+iii) Es gibt die folgenden weiteren Entsprechungen zwischen C und R2:
+Addition in C
+Addition in R2
+Betrag in C
+Betrag in R2
+Konjugation in C
+Spiegelung an Re-Achse in R2
+(5.16)
+5.2.2
+Trigonometrische Form
+Die Punkte in der Gauss-Ebene lassen sich sowohl durch kartesische Koordinaten als auch
+durch Polarkoordinaten beschreiben. Wir betrachten dazu folgende Definition.
+Definition 5.3
+Argument
+Sei z ∈C \ {0}. Das Argument von arg(z) ist der Winkel in der Gauss-Ebene zwischen der
+x-Achse und der Verbindungslinie vom Ursprung zu z nach folgenden Varianten.
+(a) Basler-Variante: φ ∈[0, 2π[ .
+(b) Zürcher-Variante: φ ∈]−π, π].
+II-6

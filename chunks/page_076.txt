@@ -1,0 +1,67 @@
+Bemerkungen:
+i) Uneigentliche Integrale sind als Grenzwerte definiert und existieren nur, wenn die betref-
+fenden Grenzwerte konvergieren.
+ii) Bei der Berechnung eines uneigentlichen Integrals ist die Reihenfolge der Rechenschritte
+sehr wichtig. Zuerst muss eine Stammfunktion F von f gefunden und an den Grenzen
+x0 und s bzw. −s und xE ausgewertet werden. Erst dann wird der Grenzwert s →∞
+betrachtet. Dieses Vorgehen führt zu Rechnungen der Form
+I =
+Z ∞
+x0
+f(x) dx = lim
+s→∞
+Z s
+x0
+f(x) dx = lim
+s→∞
+h
+F(x)
+i
+s
+x0 = lim
+s→∞
+
+F(s) −F(x0)
+
+= . . . (3.33)
+iii) Das uneigentliche Integral kann nur existieren, wenn sich der Integrand der x-Achse asym-
+ptotisch annähert, d.h. es muss gelten
+lim
+x→∞f(x) = 0
+bzw.
+lim
+x→−∞f(x) = 0.
+(3.34)
+iv) Allein die Tatsache, dass sich der Integrand der x-Achse asymptotisch annähert reicht für
+die Existenz des uneigentlichen Integrals jedoch nicht aus! Es kommt vielmehr darauf an,
+wie “schnell” diese asymptotische Annäherung stattfindet.
+v) Beispiel-Codes zur Berechnung von uneigentlichen Integralen mit gängiger Software.
+Mathematica/WolframAlpha
+Integrate[1/x^2,{x,2,Infinity}]
+Python/Sympy
+import sympy as sp;
+sp.integrate(1/x**2,(x,2,sp.oo));
+Wir betrachten den folgenden Satz.
+Satz 3.4
+Uneigentliches Integral von reziproken Potenzen
+Seien p, x0 ∈R mit x0 > 0, dann gilt
+Z ∞
+x0
+1
+xp dx =
+
+
+
+
+
+1
+p −1 ·
+1
+xp−1
+0
+p > 1
+divergent
+p ≤1.
+(3.35)
+Beweis: Übung.
+I-70

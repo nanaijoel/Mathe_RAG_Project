@@ -1,0 +1,52 @@
+Bemerkungen:
+i) Für alle Skalar-Produkte und alle v, w ∈V gilt die wichtige Konvention
+v ⊥w ⇔⟨v, w⟩= 0.
+(7.91)
+ii) Für positiv definite Skalar-Produkte kann die Formel (7.90) in jeden Fall angewendet
+werden, denn aus der Cauchy-Schwarz-Ungleichung folgt für alle v, w ∈V \ {0}
+⟨v, w⟩
+|v| · |w| ∈[−1, 1].
+(7.92)
+iii) Für nicht positiv definite Skalar-Produkte lässt sich im allgemeinen keine universell gültige
+Formel für den Winkel zwischen zwei Vektoren finden.
+7.3.2
+Metrik
+Wir betrachten die folgende Definition.
+Definition 7.15
+Metrik
+Seien (V, R, +, ·) ein reeller Vektorraum mit endlicher Dimension n ∈N+ und Skalar-Produkt
+⟨., .⟩und B = {e1, . . . , en} ⊂V eine Basis von V . Die Metrik g ∈M(n, n, R) ist die Gram-
+Matrix der Basis-Vektoren in B, d.h.
+g = G(e1; . . . ; en) :=
+
+
+⟨e1 , e1⟩
+. . .
+⟨e1 , en⟩
+...
+...
+...
+⟨en , e1⟩
+. . .
+⟨en , en⟩
+
+.
+(7.93)
+Bemerkungen:
+i) Die Komponenten der Metrik werden auch metrische Koeffizienten genannt. Für alle i, j ∈
+{1, . . . , n} gilt
+gij = ⟨ei , ej ⟩.
+(7.94)
+ii) Das Symbol g wird sowohl für die Metrik als auch für deren Determinante verwendet.
+Welche Bedeutung gerade gemeint ist, muss aus dem Kontext abgelesen werden.
+iii) Die Metrik ist in jedem Fall regulär, weil die Basis-Vektoren nach Definition linear unab-
+hängig sein müssen.
+iv) Die Metrik ist genau dann diagonal, wenn die Basis-Vektoren paarweise senkrecht aufein-
+ander stehen.
+v) In Rn mit Gram-Riemann-Skalar-Produkt haben die Standard-Einheitsvektoren {ˆe1, . . . ,ˆen}
+die Metrik
+ˆg = 1
+bzw.
+gij = δij.
+(7.95)
+II-70

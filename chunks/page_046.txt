@@ -1,0 +1,62 @@
+vi) Ein Flussintegral über eine geschlossene Fläche heisst Perforation des Vektorfeldes durch
+die betreffende Fläche.
+In diesem Fall verwendet man das Ring-Integralzeichen, d.h.
+Φ =
+I
+M
+⟨v, ˆn⟩dA.
+(2.125)
+vii) Der Fluss eines Vektorfeldes v durch eine Fläche ist das Integral des Anteils von v,
+welcher entlang ˆn und somit senkrecht zur Fläche zeigt. Der zu ˆn senkrechte bzw. zur
+Fläche parallele Anteil von v ist für den Fluss irrelevant.
+Wir betrachten den folgenden Satz.
+Satz 2.10
+Fluss bei konstantem Anteil senkrecht zur Fläche
+Seien M eine parametrisierte Fläche mit Einheitsnormalen-Vektor ˆn und Flächeninhalt A sowie
+v : R3 →R3 ein Vektorfeld. Gilt entlang der Fläche ⟨v, ˆn⟩=: C ≡konst., dann beträgt der
+Fluss von v durch die Fläche
+Φ = C · A.
+(2.126)
+Beweis: Für den Fluss von v durch die Fläche erhalten wir
+Φ =
+Z
+M
+⟨v, ˆn⟩dA =
+Z
+M
+C dA = C
+Z
+M
+1 dA = C · A.
+(2.127)
+Damit haben wir den Satz bewiesen.
+Wir betrachten den folgenden Satz.
+Satz 2.11
+Perforation eines homogenen Vektorfeldes
+Die Perforation eines homogenen Vektorfeldes verschwindet.
+Anwendungen:
+• Strömungsdynamik:
+Φv =
+Z
+M
+⟨v, ˆn⟩dA ≡Volumen-Fluss des Mediums durch die Fläche
+ m3
+s
+
+.
+(2.128)
+• Elektrodynamik: Wir betrachten die folgenden Fälle getrennt.
+Fall 1: M ist eine geschlossene Fläche. Dann gilt
+ΦE =
+I
+M
+⟨E, ˆn⟩dA = 1
+ε0
+· Qeg
+(2.129)
+ΦB =
+I
+M
+⟨B, ˆn⟩dA = 0.
+(2.130)
+I-40

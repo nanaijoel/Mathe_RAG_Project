@@ -1,0 +1,63 @@
+6.1.3
+Spezielle Matrizen
+6.1.3.1
+Quadratische Matrix
+Eine ganz spezielle Rolle spielen reelle Matrizen, die gleich viele Zeilen wie Spalten haben.
+Definition 6.6
+Quadratische Matrix
+Sei n ∈N+. Eine reelle Matrix A ∈M(n, n, R) heisst quadratische Matrix.
+Bemerkungen:
+i) Quadratische Matrizen haben genau n2 Komponenten.
+ii) Das Produkt von zwei quadratischen Matrizen ist wieder eine quadratische Matrix, d.h.
+A, B ∈M(n, n, R) ⇒A · B ∈M(n, n, R).
+iii) Quadratische Matrizen können mit sich selbst multipliziert werden. So lassen sich Potenzen
+bilden. Für n, p ∈N+ und A ∈M(n, n, R) ist
+Ap : = A · . . . · A
+|
+{z
+}
+p Faktoren
+.
+(6.12)
+Die Potenz ist dann wieder eine quadratische Matrix, d.h. Ap ∈M(n, n, R).
+Beispiele:
+•
+
+2
+
+•
+ 2
+−1
+7
+5
+
+•
+
+
+3
+−6
+7
+1
+0
+−2
+1
+8
+9
+
+
+Von zwei quadratischen Matrizen gleicher Dimension können beide Produkt, d.h. sowohl A · B
+als auch B · A gebildet werden. Die Differenz ist in vielen Anwendungen von Interesse.
+Definition 6.7
+Kommutator
+Seien n ∈N+ und A, B ∈M(n, n, R). Der Kommutator von A und B ist die Matrix
+[A, B] := A · B −B · A.
+(6.13)
+Bemerkungen:
+i) Der Kommutator von zwei quadratischen Matrizen ist wieder eine quadratische Matrix,
+d.h. A, B ∈M(n, n, R) ⇒[A, B] ∈M(n, n, R).
+ii) Der Kommutator verschwindet genau dann, wenn die Matrizen kommutieren, d.h. wenn
+gilt A · B = B · A.
+iii) Der Kommutator ist als Operation schiefsymmetrisch, d.h. es gilt
+[A, B] = −[B, A].
+(6.14)
+II-19

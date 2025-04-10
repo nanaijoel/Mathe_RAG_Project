@@ -1,0 +1,82 @@
+Beweis: Die Aussage folgt sofort aus der Euler-Formel.
+Bemerkungen:
+i) Jede komplexe Zahl z ∈C lässt sich auf drei Arten darstellen, nämlich
+z =
+x + y · i
+|
+{z
+}
+arithmetische Form
+=
+r · cis(φ)
+|
+{z
+}
+trigonometrische Form
+=
+r · ei·φ
+| {z }
+exponentielle Form
+.
+(5.31)
+ii) Man bezeichnet die Schreibweise z = r · ei·φ nur dann als exponentielle Form, wenn gilt
+r = |z| ≥0. Der Winkel φ ∈R darf jedoch beliebig gewählt werden, d.h. φ muss nicht
+unbedingt das Argument gemäss einer der beiden Varianten sein.
+iii) In exponentieller Form lässt sich die Multiplikation von zwei komplexen Zahlen auf einfa-
+che Weise in der Gauss-Ebene geometrisch interpretieren. Es gilt
+z1 · z2 = r1 · ei·φ1 · r2 · ei·φ2 = r1 · r2 · ei·φ1+i·φ2 = r1 · r2 · ei·(φ1+φ2).
+(5.32)
+iv) In exponentieller Form lässt sich das Potenzieren einer komplexen Zahl mit einem strikt
+positiven Exponenten p > 0 auf einfache Weise in der Gauss-Ebene geometrisch interpre-
+tieren. Es gilt
+zp = (r · ei·φ)
+p = rp · (ei·φ)
+p = rp · ei·p·φ.
+(5.33)
+5.4.3
+Potenz-Gleichungen
+Seien w ∈C und n ∈N+. Wir betrachten eine Potenz-Gleichung der Form
+zn = w.
+(5.34)
+Dabei suchen wir alle komplexen Lösungen z ∈C. Beispiele:
+• Wir betrachten die Potenz-Gleichung
+z2 = 4 ⇒z1,2 = ±
+√
+4 = ±2 ⇒L = {−2, 2}.
+(5.35)
+• Wir betrachten die Potenz-Gleichung
+z2 = −4 ⇒z1,2 = ±i ·
+√
+4 = ±2 · i. ⇒L = {−2 · i, 2 · i}.
+(5.36)
+• Wir betrachten die Potenz-Gleichung
+z3 = −27 = | −27| · ei·arg(−27) = 27 · ei·π = 27 · ei·(π+(k−1)·2π)
+für
+k ∈Z.
+(5.37)
+Wir erhalten die folgenden drei Lösungen
+k = 1 :
+z1 =
+3√
+27 · ei· π+0·2π
+3
+= 3 · ei· π
+3
+(5.38)
+k = 2 :
+z2 =
+3√
+27 · ei· π+1·2π
+3
+= 3 · ei·π = −3
+(5.39)
+k = 3 :
+z3 =
+3√
+27 · ei· π+2·2π
+3
+= 3 · ei· 5π
+3 = 3 · e−i· π
+3
+(5.40)
+II-10

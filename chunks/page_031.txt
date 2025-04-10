@@ -1,0 +1,109 @@
+iv) In der Literatur findet man auch die alternativen Schreibweisen
+I =
+Z
+G
+f dA =
+Z
+G
+f dG =
+Z
+G
+f dR2 =
+Z
+G
+f dx2 =
+Z
+G
+f d2x =
+Z
+G
+f dµ
+=
+ZZ
+G
+f dA =
+ZZ
+G
+f dG =
+ZZ
+G
+f dR2 =
+ZZ
+G
+f dx2 =
+ZZ
+G
+f d2x =
+ZZ
+G
+f dµ
+=
+Z
+G
+f(x; y) dx dy =
+ZZ
+G
+f(x; y) dx dy.
+(2.66)
+v) Integrale über Gebiete in 2D erhält man aus einem Archimedes-Cauchy-Riemann-
+Approximationsprozess in 2D gemäss folgenden Schritten.
+S1
+Lokal: Der Beitrag zur Grösse I eines kleinen Flächenstücks δA auf der x-y-Ebene
+ist
+δI ≈. . . ≈f(x; y) · δA.
+(2.67)
+S2
+Global: Durch Integration über das Gebiet G können wir die gesamte Grösse I be-
+rechnen. Wir erhalten
+I =
+Z
+G
+f dA = . . . .
+(2.68)
+2.3.1.2
+Elementare Rechenregeln
+Wie in 1D ist die Linearität die wichtigste Eigenschaft des Integrals. Wir betrachten dazu den
+folgenden Satz.
+Satz 2.2
+Linearität des Integrals in 2D
+Seien G ⊂R2 ein Gebiet, g, h : R2 →R integrierbare Funktionen und a, b ∈R. Dann gelten die
+folgenden Rechenregeln.
+(a) Faktor-Regel:
+Z
+G
+a · g dA = a
+Z
+G
+g dA.
+(2.69)
+(b) Summen-Regel:
+Z
+G
+
+g + h
+
+dA =
+Z
+G
+g dA +
+Z
+G
+h dA.
+(2.70)
+(c) Linearität:
+Z
+G
+
+a · g + b · h
+
+dx = a
+Z
+G
+g dA + b
+Z
+G
+h dA.
+(2.71)
+Wie in 1D kann auch in 2D ein Integral in mehrere zerlegt werden. Dazu betrachten wir den
+folgenden Satz.
+I-25

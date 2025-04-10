@@ -1,0 +1,102 @@
+iii) Eine quadratische Matrix U heisst unimodular, falls gilt det(U) = 1. Für eine beliebige
+quadratische Matrix A folgt dann
+det(U · A) = det(U) · det(A) = 1 · det(A) = det(A).
+(6.123)
+Ferner ist das Produkt von zwei unimodularen Matrizen wieder unimodular.
+Gewisse einfache Modifikationen an einer Matrix führen auch zu einfachen Veränderungen ihrer
+Determinante.
+Satz 6.16
+Modifikationsregeln der Determinante
+Sei n ∈N+, A ∈M(n, n, R) und a ∈R. Dann gelten folgende Modifikationsregeln.
+(a) Zeilentausch ⇒det(A) 7→−det(A).
+(b) Spaltentausch ⇒det(A) 7→−det(A).
+(c) Multiplikation einer Zeile mit a ⇒det(A) 7→a · det(A).
+(d) Multiplikation einer Spalte mit a ⇒det(A) 7→a · det(A).
+Besonders nützlich ist auch die folgende Modifikationsregel.
+Satz 6.17
+Invarianz der Determinante unter einem Gauss-Schritt
+Subtrahiert man von einer Zeile einer n × n-Matrix ein beliebiges Vielfaches einer andern Zeile,
+dann ändert sich die Determinante der Matrix nicht.
+Die Modifikationsregeln ermöglichen es, Determinanten mit Hilfe des Gauss-Verfahrens zu
+berechnen. Als Beispiel berechnen wir die Determinante der Matrix
+A =
+
+
+1
+2
+−3
+2
+−4
+1
+2
+2
+8
+
+.
+(6.124)
+Wir erhalten
+det(A) =
+1
+2
+−3
+2
+−4
+1
+2
+2
+8
+=
+[1]
+2
+−3
+2
+2
+−4
+1
+1
+1
+1
+4
+· 2 =
+[1]
+2
+−3
+0
+−8
+7
+0
+−1
+7
+· 2
+(6.125)
+=
+[1]
+2
+−3
+0
+[1]
+−7
+8
+0
+8
+−7
+· 2 · (−1)3 =
+[1]
+2
+−3
+0
+[1]
+−7
+0
+0
+[49]
+· 2 · (−1) = 1 · 1 · 49 · 2 · (−1) = −98.
+Eine der Hauptanwendungen von Determinanten ist die Prüfung einer quadratischen Matrix
+auf Singularität bzw. Regularität. Es gilt nämlich der folgende, bemerkenswerte Satz.
+Satz 6.18
+Regularitätssatz
+Eine quadratische Matrix A ist genau dann regulär, wenn gilt det(A) ̸= 0.
+Bemerkungen:
+i) Gilt det(A) ̸= 0, dann ist die quadratische Matrix A regulär, d.h. sie hat eine Inverse A−1
+und die zugehörige lineare Abbildung a ist bijektiv und hat eine Umkehrabbildung a−1.
+II-46

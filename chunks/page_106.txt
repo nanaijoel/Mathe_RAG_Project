@@ -1,0 +1,102 @@
+6.1.3.4
+Einheitsmatrix
+Eine ganz spezielle Rolle spielen quadratische Matrizen, die auf der Hauptdiagonalen nur Einsen
+und sonst überall nur Nullen haben.
+Definition 6.10
+Einheitsmatrix
+Sei n ∈N+. Die Matrix 1 ∈M(n, n, R) mit
+1 =
+
+
+1
+0
+. . .
+0
+0
+1
+. . .
+0
+...
+...
+...
+...
+0
+0
+. . .
+1
+
+
+(6.20)
+heisst Einheitsmatrix.
+Bemerkungen:
+i) Alle Einheitsmatrizen werden unabhängig von ihrer Dimension identifiziert und mit 1
+bezeichnet. Es gilt also
+1 =
+
+1
+
+=
+ 1
+0
+0
+1
+
+=
+
+
+1
+0
+0
+0
+1
+0
+0
+0
+1
+
+=
+
+
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+1
+
+= . . . .
+(6.21)
+ii) Die Einheitsmatrix hat die gleichen algebraischen Eigenschaften wie die Zahl Eins. Für
+jede Matrix A gilt
+1 · A = A · 1 = A.
+(6.22)
+iii) Ist A eine quadratische Matrix, dann folgt der Kommutator
+[A, 1] = A · 1 −1 · A = A −A = 0.
+(6.23)
+Das heisst, die Einheitsmatrix kommutiert mit jeder quadratischen Matrix.
+iv) Die Einheitsmatrix ist offensichtlich symmetrisch.
+v) Beispiel-Codes zum Erzeugen von Einheitsmatrizen mit gängiger Software.
+MATLAB/Octave
+M=eye(3)
+M=eye(2,3)
+Mathematica/WolframAlpha
+M=IdentityMatrix[3]
+Python/Numpy
+import numpy as np;
+M=np.eye(3)
+M=np.eye(2,3)
+Python/Sympy
+import sympy as sp;
+M=sp.eye(3)
+M=sp.eye(2,3)
+II-22

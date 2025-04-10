@@ -1,0 +1,42 @@
+iii) Die Spiegelungsmatrix S(ˆn) ist symmetrisch und es folgt
+S−1(ˆn) = ST(ˆn) = S(ˆn).
+(6.79)
+Wie geometrisch offensichtlich, ist die Spiegelungsmatrix ihre eigene Inverse.
+iv) Betrachtet man einen Normalen-Vektor n ∈Rn \ {0} der noch nicht normiert ist, dann
+kann man diese Normierung auch direkt in die Householder-Formel (6.74) einbauen.
+Es gilt
+S(n) = 1 −2 · ˆn · ˆnT = 1 −2 · n
+|n| · nT
+|n| = 1 −2 · n · nT
+|n|2
+= 1 −2 · n · nT
+⟨n, n⟩.
+(6.80)
+v) Beispiel-Codes zum Erzeugen von Householder-Spiegelungsmatrizen gemäss (6.80) mit
+gängiger Software.
+MATLAB/Octave
+S=@(n)eye(length(n))-2*n*n’/dot(n,n);
+Python/Numpy
+import numpy as np;
+def S(n):
+nn=n/np.linalg.norm(n);
+M=np.eye(n.shape[0])-2*nn@nn.T;
+return M;
+6.3.3.2
+Rotationen in 3D
+Wir betrachten die Rotation in R3 um den Winkel φ ∈R rechtshändig um die Drehachse in
+Richtung ˆφ ∈R3. Die Situation ist in der folgenden Skizze dargestellt.
+ˆb
+φ
+ˆa
+v
+R(φ) · v
+v⊥
+ˆφ
+Zunächst bemerken wir, dass sich aus den Bestimmungsstücken φ und ˆφ der Rotation auf
+kanonische Weise ein Vektor bilden lässt gemäss
+φ = φ · ˆφ.
+(6.81)
+Dieser Vektor zeigt demnach in Richtung der Drehachse und hat gerade die Länge des Dreh-
+winkels. Als nächstes betrachten wir die sogenannte Generator-Matrix.
+II-36

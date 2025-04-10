@@ -1,0 +1,121 @@
+Je nach Struktur des Integranden kann die Integration über ein Rechteck weiter vereinfacht
+werden. Wir betrachten dazu den folgenden Satz.
+Satz 2.6
+Spezialfälle der Integration über ein Rechteck.
+Seien x0, xE, y0, yE ∈R mit x0 < xE und y0 < yE sowie G das Rechteck
+G := [x0, xE] × [y0, yE].
+(2.80)
+Dann gilt folgendes.
+(a) Konstanten-Regel: Für alle C ∈R ist
+Z
+G
+C dA = C · (xE −x0) · (yE −y0).
+(2.81)
+(b) Separation-Regel: Für zwei integrierbare Funktionen g, h : R →R ist
+Z
+G
+g(x) · h(y) dA =
+Z xE
+x0
+g(x) dx ·
+Z yE
+y0
+h(y) dy.
+(2.82)
+Beweis: Gemäss Fubini-Satz und Faktor-Regel gilt
+Z
+G
+g(x) · h(y) dA =
+Z yE
+y0
+Z xE
+x0
+g(x) · h(y) dx dy =
+Z yE
+y0
+h(y) ·
+Z xE
+x0
+g(x) dx dy
+=
+Z xE
+x0
+g(x) dx ·
+Z yE
+y0
+h(y) dy.
+(2.83)
+Wir zeigen mehrere Varianten, um die Konstanten-Regel zu beweisen.
+Variante 1: Gemäss Fubini-Satz und Faktor-Regel gilt
+Z
+G
+C dA =
+Z yE
+y0
+Z xE
+x0
+C dx dy = C
+Z yE
+y0
+Z xE
+x0
+1 dx dy = C
+Z yE
+y0
+h
+x
+i
+xE
+x0 dy = C
+Z yE
+y0
+(xE −x0) dy
+= C · (xE −x0)
+Z yE
+y0
+1 dy = C · (xE −x0) ·
+h
+y
+i
+yE
+y0
+= C · (xE −x0) · (yE −y0).
+(2.84)
+Variante 2: Gemäss Faktor-Regel und Separation-Regel gilt
+Z
+G
+C dA = C
+Z
+G
+1 dA = C
+Z
+G
+1 · 1 dA = C
+Z xE
+x0
+1 dx ·
+Z yE
+y0
+1 dy = C ·
+h
+x
+i
+xE
+x0 ·
+h
+y
+i
+yE
+y0
+= C · (xE −x0) · (yE −y0).
+(2.85)
+Variante 3: Gemäss Faktor-Regel und Flächensatz gilt
+Z
+G
+C dA = C
+Z
+G
+1 dA = C · A = C · ∆x · ∆y = C · (xE −x0) · (yE −y0).
+(2.86)
+Damit haben wir den Satz bewiesen.
+I-28

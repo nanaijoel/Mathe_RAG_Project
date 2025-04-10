@@ -1,0 +1,114 @@
+Bemerkenswerterweise gilt nun der folgende Satz.
+Satz 7.6
+Berechnung mit der Abbildungsmatrix
+Seien (V, K, +, ·) und (W, K, +, ·) zwei Vektorräume über dem gleichen Zahlenkörper K mit den
+endlichen Dimensionen dim(V ) = n ∈N+ bzw. dim(W) = m ∈N+ und Basen {e1, . . . , en} ⊆
+V bzw. {E1, . . . , Em} ⊆W sowie a : V →W eine lineare Abbildung mit Abbildungsmatrix
+A ∈M(m, n, K). Ferner seien
+v =
+n
+X
+j=1
+vj · ej ∈V
+und
+w =
+m
+X
+i=1
+wi · Ei ∈W,
+(7.38)
+für welche gilt
+w = a(v).
+(7.39)
+Für die Komponenten von v und w gilt dann die Beziehung
+
+
+w1
+...
+wm
+
+=
+
+
+A11
+. . .
+A1n
+...
+...
+...
+Am1
+. . .
+Amn
+
+·
+
+
+v1
+...
+vn
+
+.
+(7.40)
+Beweis: Durch Einsetzen der Basis-Darstellung von v und weil a eine lineare Abbildung ist,
+erhalten wir
+m
+X
+i=1
+wi · Ei = w = a(v) = a
+ n
+X
+j=1
+vj · ej
+!
+=
+n
+X
+j=1
+vj · a(ej) =
+n
+X
+j=1
+vj ·
+m
+X
+i=1
+Ai
+j · Ei
+=
+m
+X
+i=1
+n
+X
+j=1
+Ai
+j · vj
+|
+{z
+}
+= wi
+·Ei.
+(7.41)
+Wegen der Eindeutigkeit der Basis-Darstellung folgt aus einem Koeffizientenvergleich für alle
+i ∈{1, . . . , m}, dass
+wi =
+n
+X
+j=1
+Ai
+j · vj.
+(7.42)
+In Matrix-Schreibweise entspricht dies genau (7.40) und wir haben den Satz bewiesen.
+Bemerkungen:
+i) Sind in den Vektorräumen V und W jeweils Basen gewählt, dann reduziert sich die An-
+wendung einer linearen Abbildung auf eine Matrix-Multiplikation analog zur Situation für
+eine lineare Abbildung des Typs a : Rn →Rm.
+ii) Die Eigenschaften einer linearen Abbildung können aus den Eigenschaften ihrer Abbil-
+dungsmatrix abgelesen werden.
+iii) Analog zur Situation für eine lineare Abbildung des Typs a : Rn →Rm gelten auch hier
+der Verknüpfungssatz und der Inversionssatz für bijektive, lineare Abbildungen
+iv) Analog zur Situation für eine lineare Abbildung des Typs a : Rn →Rm kann die Abbil-
+dungsmatrix mit Hilfe des Spalten-Vektor-Konstruktionsverfahrens gefunden werden.
+v) Wählt man in V bzw. W eine andere Basis, dann wird die gleiche lineare Abbildung durch
+eine andere Abbildungsmatrix beschrieben.
+II-63

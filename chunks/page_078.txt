@@ -1,0 +1,74 @@
+3.2.2
+Integration über Polstellen
+Wir betrachten die Fläche zwischen dem Graphen einer Funktion f : R \ {xp} →R und
+einer vertikalen Asymptote bei xp ∈R. Eine solche Situation ist im folgenden x-y-Diagramm
+dargestellt.
+x0
+xp
+xE
+x
+0
+y
+y = f(x)
+I
+Wir betrachten die folgende Definition.
+Definition 3.3
+Uneigentliches Integral über eine Polstelle.
+Seien x0, xp, xE ∈R mit x0 ≤xp ≤xE und f : R \ {xp} →R eine integrierbare Funktion. Das
+uneigentliche Integral von f über die Polstelle xp ist
+Z xE
+x0
+f(x) dx := lim
+r↗xp
+Z r
+x0
+f(x) dx + lim
+s↘xp
+Z xE
+s
+f(x) dx,
+(3.40)
+falls beide Grenzwerte konvergieren.
+Bemerkungen:
+i) Das uneigentliche Integral wird als Summe von zwei Grenzwerten berechnet und existiert
+somit nur dann, wenn beide einzeln konvergieren.
+ii) Falls xp ∈{x0, xE}, dann fällt einer der beiden Grenzwerte weg. Es gilt
+xp = x0 ⇒
+Z xE
+x0
+f(x) dx =
+Z xE
+xp
+f(x) dx = lim
+s↘xp
+Z xE
+s
+f(x) dx
+(3.41)
+xp = xE ⇒
+Z xE
+x0
+f(x) dx =
+Z xp
+x0
+f(x) dx = lim
+r↗xp
+Z r
+x0
+f(x) dx.
+(3.42)
+iii) Befinden sich mehr als eine Polstelle im Intervall [x0, xE], dann muss das Integral in
+Teilabschnitte unterteilt und weitere Grenzwerte eingeführt werden.
+iv) In der Praxis ist aus Integrand und Integrationsgrenzen nicht immer auf den ersten Blick
+ersichtlich, ob es sich um ein uneigentliches Integral mit Polstellen handelt, wie z.B. bei
+I =
+Z 3
+0
+2x −4
+1 −e
+2−x
+3
+dx
+(3.43)
+mit einem Pol bei x = 2.
+I-72

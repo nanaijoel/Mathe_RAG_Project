@@ -1,0 +1,207 @@
+6.2.3
+Spalten-Vektor-Konstruktionsverfahren
+Wir betrachten eine lineare Abbildung a : Rm →Rn deren geometrische Wirkung auf Vektoren
+in Rm wir kennen, z.B. eine Streckung, Projektion, Spiegelung oder Drehung. Wie lässt sich
+nun die zugehörige Abbildungsmatrix A berechnen? Um die überraschend einfache Antwort auf
+diese Frage zu finden, betrachten wir zunächst eine allgemeine 2×2-Matrix sowie die Standard-
+Einheitsvektoren in R2, d.h.
+A =
+ a
+b
+c
+d
+
+bzw.
+ˆe1 =
+ 1
+0
+
+,
+ˆe2 =
+ 0
+1
+
+.
+(6.42)
+Es gilt
+a(ˆe1) = A · ˆe1 =
+ a
+b
+c
+d
+
+·
+ 1
+0
+
+=
+ a · 1 + b · 0
+c · 1 + d · 0
+
+=
+ a
+c
+
+(6.43)
+a(ˆe2) = A · ˆe2 =
+ a
+b
+c
+d
+
+·
+ 0
+1
+
+=
+ a · 0 + b · 1
+c · 0 + d · 1
+
+=
+ b
+d
+
+.
+(6.44)
+Die Bilder der Standard-Einheitsvektoren unter der linearen Abbildung a sind demnach gerade
+die Spalten der Abbildungsmatrix A. Dies ist eine allgemeingültige Tatsache, die für beliebige
+lineare Abbildungen gilt.
+Satz 6.5
+Spalten-Vektor-Satz
+Seien m, n ∈N+, a : Rm →Rn eine lineare Abbildung mit Abbildungsmatrix A ∈M(n, m, R) und
+ˆe1 =
+
+
+1
+0
+0
+...
+0
+
+
+, ˆe2 =
+
+
+0
+1
+0
+...
+0
+
+
+, . . . , ˆem =
+
+
+0
+0
+...
+0
+1
+
+
+.
+(6.45)
+Dann gilt
+A =
+
+a(ˆe1)
+a(ˆe2)
+. . .
+a(ˆem)
+
+.
+(6.46)
+Beweis: Die Bilder der Einheitsvektoren aus (6.45) unter der linearen Abbildung a sind
+a(ˆe1) = A · ˆe1 =
+
+
+A11
+A12
+. . .
+A1m
+A21
+A22
+. . .
+A2m
+A31
+A32
+. . .
+A3m
+...
+...
+...
+...
+An1
+An2
+. . .
+Anm
+
+
+·
+
+
+1
+0
+0
+...
+0
+
+
+=
+
+
+A11
+A21
+A31
+...
+An1
+
+
+(6.47)
+a(ˆe2) = A · ˆe2 =
+
+
+A11
+A12
+. . .
+A1m
+A21
+A22
+. . .
+A2m
+A31
+A32
+. . .
+A3m
+...
+...
+...
+...
+An1
+An2
+. . .
+Anm
+
+
+·
+
+
+0
+1
+0
+...
+0
+
+
+=
+
+
+A12
+A22
+A32
+...
+An2
+
+
+(6.48)
+II-28

@@ -1,0 +1,80 @@
+6.2.1
+Definition
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-26
+6.2.2
+Eigenschaften
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-27
+6.2.3
+Spalten-Vektor-Konstruktionsverfahren
+. . . . . . . . . . . . . . . . . . . . II-28
+6.2.4
+Beispiele . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-29
+6.3
+Orthogonale Matrizen . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-31
+6.3.1
+Definition
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-31
+6.3.2
+Geometrische Eigenschaften . . . . . . . . . . . . . . . . . . . . . . . . . . II-32
+6.3.3
+Spezielle orthogonale Matrizen
+. . . . . . . . . . . . . . . . . . . . . . . . II-35
+6.4
+Spur & Determinante
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-39
+6.4.1
+Einleitung
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-39
+6.4.2
+Spur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-39
+6.4.3
+Determinante
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-41
+6.4.4
+Mass-Formeln
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-48
+6.5
+Eigenwerte & Eigenvektoren . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-50
+6.5.1
+Einleitung
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-50
+6.5.2
+Definition & Eigenschaften
+. . . . . . . . . . . . . . . . . . . . . . . . . . II-50
+6.5.3
+Charakteristisches Polynom . . . . . . . . . . . . . . . . . . . . . . . . . . II-51
+6.5.4
+Eigenwerte & Eigenvektoren berechnen . . . . . . . . . . . . . . . . . . . . II-52
+6.5.5
+Spezielle Eigenwerte & Eigenvektoren . . . . . . . . . . . . . . . . . . . . . II-54
+7
+Vektorräume
+II-55
+7.1
+Vektorraumstruktur
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-55
+7.1.1
+Definition
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-55
+7.1.2
+Linearkombinationen, Basis & Dimension . . . . . . . . . . . . . . . . . . . II-57
+7.1.3
+Unterräume
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-61
+7.2
+Lineare Abbildungen . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-62
+7.2.1
+Definition
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-62
+7.2.2
+Matrix-Darstellung . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-62
+7.2.3
+Bild & Kern . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-64
+7.3
+Skalar-Produkt & Metrik
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-65
+7.3.1
+Skalar-Produkt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-65
+7.3.2
+Metrik . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . II-70
+5

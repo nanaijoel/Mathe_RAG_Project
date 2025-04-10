@@ -1,0 +1,158 @@
+...
+...
+a(ˆem) = A · ˆem =
+
+
+A11
+A12
+. . .
+A1m
+A21
+A22
+. . .
+A2m
+A31
+A32
+. . .
+A3m
+...
+...
+...
+...
+An1
+An2
+. . .
+Anm
+
+
+·
+
+
+0
+0
+...
+0
+1
+
+
+=
+
+
+A1m
+A2m
+A3m
+...
+Anm
+
+
+.
+(6.49)
+Daraus erhalten wir
+A =
+
+
+A11
+A12
+. . .
+A1m
+A21
+A22
+. . .
+A2m
+...
+...
+...
+...
+An1
+An2
+. . .
+Anm
+
+
+=
+
+
+
+
+A11
+A21
+...
+An1
+
+
+
+
+A12
+A22
+...
+An2
+
+
+. . .
+
+
+A1m
+A2m
+...
+Anm
+
+
+
+
+=
+
+a(ˆe1)
+a(ˆe2)
+. . .
+a(ˆem)
+
+.
+(6.50)
+Damit haben wir den Satz bewiesen.
+Bemerkungen:
+i) Um die Abbildungsmatrix einer linearen Abbildung zu bestimmen, braucht man also nur
+ihre geometrische Wirkung auf die Standard-Einheitsvektoren zu kennen.
+ii) Um den Spalten-Vektor-Satz auf eine geometrische Abbildung anwenden zu können, muss
+man jedoch schon wissen bzw. mit Hilfe der Haupteigenschaft (6.33) zuerst prüfen, dass
+die Abbildung auch wirklich linear ist.
+6.2.4
+Beispiele
+Bei folgenden Beispielen von linearen Abbildungen des Typs a : R2 →R2, lässt sich die Abbil-
+dungsmatrix sehr leicht mit Hilfe des Spalten-Vektor-Konstruktionsverfahrens finden.
+• Identität: 1 =
+ 1
+0
+0
+1
+
+• Streckung am Ursprung um den Faktor λ ∈R: Zλ = λ · 1 =
+ λ
+0
+0
+λ
+
+• Punktspiegelung am Ursprung: P = −1 =
+ −1
+0
+0
+−1
+
+• Projektion auf die x-Achse: Px :=
+ 1
+0
+0
+0
+
+• Projektion auf die y-Achse: Py :=
+ 0
+0
+0
+1
+
+• Spiegelung an der x-Achse: Sx :=
+ 1
+0
+0
+−1
+
+II-29

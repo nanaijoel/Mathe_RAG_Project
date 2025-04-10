@@ -1,0 +1,58 @@
+5.1.4
+Grundoperationen
+Wir betrachten x1, y1, x2, y2 ∈R und die beiden komplexen Zahlen
+z1 = x1 + y1 · i
+und
+z2 = x2 + y2 · i.
+(5.7)
+Beim Durchführen der algebraischen Grundoperationen erhalten wir die folgenden Ergebnisse:
+Addition: Es gilt
+z1 + z2 = x1 + y1 · i + x2 + y2 · i = x1 + x2 + y1 · i + y2 · i = x1 + x2 + (y1 + y2) · i.
+(5.8)
+Subtraktion: Es gilt
+z1 −z2 = x1 + y1 · i −x2 −y2 · i = x1 −x2 + y1 · i −y2 · i = x1 −x2 + (y1 −y2) · i.
+(5.9)
+Multiplikation: Es gilt
+z1 · z2 = (x1 + y1 · i) · (x2 + y2 · i) = x1 · x2 + y1 · i · x2 + x1 · y2 · i + y1 · i · y2 · i
+= x1 · x2 + x2 · y1 · i + x1 · y2 · i + y1 · y2 · i2
+= x1 · x2 + x1 · y2 · i + x2 · y1 · i + y1 · y2 · (−1)
+= x1 · x2 −y1 · y2 + (x1 · y2 + x2 · y1) · i.
+(5.10)
+Division: Für z2 ̸= 0 gilt
+z1
+z2
+= x1 + y1 · i
+x2 + y2 · i = (x1 + y1 · i) · (x2 −y2 · i)
+(x2 + y2 · i) · (x2 −y2 · i) = x1 · x2 + y1 · y2 + (−x1 · y2 + x2 · y1) · i
+x2 · x2 + y2 · y2 + (x2 · y2 −x2 · y2) · i
+= x1 · x2 + y1 · y2 + (x2 · y1 −x1 · y2) · i
+x2
+2 + y2
+2 + 0
+= x1 · x2 + y1 · y2
+x2
+2 + y2
+2
++ x2 · y1 −x1 · y2
+x2
+2 + y2
+2
+· i.
+(5.11)
+Die Ergebnisse lassen sich also auf einfache Weise wieder in arithmetischer Form schreiben.
+Wir betrachten den folgenden Satz.
+Satz 5.2
+Betrag & Konjugation
+Sei z ∈C, dann gilt
+z · z∗= |z|2.
+(5.12)
+Beweis: Es gibt x, y ∈R, so dass gilt
+z = x + y · i
+und
+z∗= x −y · i.
+(5.13)
+Daraus erhalten wir
+z · z∗= (x + y · i) · (x −y · i) = x2 + y · i · x −x · y · i −y2 · i2 = x2 + y2 = |z|2.
+(5.14)
+Damit haben wir den Satz bewiesen.
+II-5

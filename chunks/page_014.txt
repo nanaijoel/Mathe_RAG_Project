@@ -1,0 +1,70 @@
+S2
+Global: Durch Integration über z können wir die Kraft des gesamten Mediums auf die
+Staumauer berechnen. Wir erhalten
+F =
+Z zE
+z0
+ρ · g · z · b(z) dz = ρ · g
+Z zE
+z0
+z · b(z) dz = . . . .
+(1.14)
+1.2.4.3
+Massenträgheitsmomente
+Wir betrachten einen dünnen Stab mit Länge L und Masse m, welcher gedreht werden soll um
+eine Drehachse, die senkrecht zum Stab durch seinen Schwerpunkt verläuft. Die Situation ist in
+der folgenden Skizze dargestellt.
+Um das Trägheitsmoment des Stabes zu berechnen, verwenden wir einen Archimedes-Cauchy-
+Riemann-Approximationsprozess. Dabei gehen wir nach folgenden Schritten vor.
+S1
+Lokal: Wir betrachten ein kleines Teilstück des Stabes an der Position x mit Länge δx.
+Für die Masse δm des Teilstücks gilt
+δm
+m = δx
+L
+⇒δm = m
+L · δx.
+(1.15)
+Das Trägheitsmoment des Teilstücks beträgt
+δI ≈r2(x) · δm = x2 · m
+L · δx = m
+L · x2 · δx.
+(1.16)
+S2
+Global: Durch Integration über x können wir das gesamte Trägheitsmoment des Stabes
+berechnen. Wir erhalten
+I =
+Z
+L
+2
+−L
+2
+m
+L · x2 dx = 2 · m
+L
+Z
+L
+2
+0
+x2 dx = 2 · m
+L · 1
+3 ·
+h
+x3 i
+L
+2
+0 = 2
+3 · m
+L ·
+ L
+2
+3
+−03
+!
+= 2
+3 · m
+L · L3
+23 = 1
+12 · m · L2.
+(1.17)
+I-8

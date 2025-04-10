@@ -1,0 +1,32 @@
+2.3
+Mehrfach-Integrale
+2.3.1
+Zweifach-Integrale
+2.3.1.1
+Definition
+Wir betrachten ein Gebiet G ⊂R2 und eine Funktion f : R2 →R. Der Graph von f ist im
+folgenden x-y-z-Diagramm dargestellt.
+Wir betrachten die folgende Definition.
+Definition 2.10
+Integration über ein Gebiet
+Seien G ⊂R2 ein Gebiet und f : R2 →R eine integrierbare Funktion. Das Integral von f über
+das Gebiet G ist
+Z
+G
+f dA :≡Volumen zwischen G und dem Graphen von f.
+(2.64)
+Bemerkungen:
+i) Wie in 1D lassen sich präzise Bedingungen definieren, die an eine Teilmenge G ⊂R2 und
+an eine Funktion f gestellt werden müssen, damit das Integral existiert. Ohne im Detail
+auf diese Voraussetzungen einzugehen, bezeichnen wir eine Teilmenge G ⊂R2 als Gebiet
+und eine Funktion f : R2 →R als integrierbar, falls alle notwendigen Kriterien erfüllt sind.
+ii) Für die Masseinheit erhalten wir
+ Z
+G
+f dA
+
+= [V ] = [A] · [f ] = [x] · [y] · [f ] = [x] · [y] · [z].
+(2.65)
+iii) Ein Integral über ein Gebiet in 2D wird synonym auch als Zweifach-Integral oder Doppel-
+Integral bezeichnet.
+I-24

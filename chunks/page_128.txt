@@ -1,0 +1,133 @@
+Die Determinante einer 3 × 3-Matrix ist folglich
+det(A) = A11 · A22 · A33 + A21 · A32 · A13 + A31 · A12 · A23
+−A31 · A22 · A13 −A11 · A32 · A23 −A21 · A12 · A33.
+(6.112)
+iv) Offensichtlich gilt in allen Dimensionen
+det(0) = 0
+und
+det(1) = 1.
+(6.113)
+v) Die Determinante einer diagonalen Matrix ist gerade das Produkt ihrer Eigenwerte. Es
+gilt also
+det(D) = λ1 · λ2 · . . . · λn.
+(6.114)
+vi) Die Determinante einer linken unteren oder rechten oberen Dreiecksmatrix reduziert sich
+auf das Produkt ihrer Diagonalenelemente. Es gilt also
+det(L) = det
+
+
+
+
+
+
+
+
+L11
+0
+0
+. . .
+0
+L21
+L22
+0
+. . .
+0
+...
+...
+...
+. . .
+...
+Ln1
+Ln2
+Ln3
+. . .
+Lnn
+
+
+
+
+
+
+
+
+= L1
+1 · L2
+2 · . . . · Ln
+n
+(6.115)
+det(R) = det
+
+
+
+
+
+
+
+
+R11
+R12
+R13
+. . .
+R1n
+0
+R22
+R23
+. . .
+R2n
+...
+. . .
+...
+...
+...
+0
+. . .
+0
+0
+Rnn
+
+
+
+
+
+
+
+
+= R1
+1 · R2
+2 · . . . · Rn
+n.
+(6.116)
+vii) Beispiel-Codes zur Berechnung der Determinante mit gängiger Software.
+MATLAB/Octave
+d=det(A)
+Mathematica/WolframAlpha
+d=Det[A]
+Python/Numpy
+import numpy as np;
+d=np.linalg.det(A)
+Python/Sympy
+import sympy as sp;
+d=sp.det(A)
+Beispiele:
+• det
+ 1
+2
+3
+4
+
+= 1 · 4 −3 · 2 = 4 −6 = 2
+• det
+ 2
+4
+3
+6
+
+= 2 · 6 −3 · 4 = 12 −12 = 0
+• det
+ 2
+0
+0
+3
+
+= 2 · 3 −0 · 0 = 6 −0 = 6
+II-44

@@ -1,0 +1,133 @@
+Wir betrachten den folgenden Satz.
+Satz 7.12
+Metrische Skalar-Produkt-Formel
+Seien (V, R, +, ·) ein reeller Vektorraum mit endlicher Dimension n ∈N+ und Skalar-Produkt
+⟨., .⟩und B = {e1, . . . , en} ⊂V eine Basis von V mit Metrik g ∈M(n, n, R) und v, w ∈V mit
+Basis-Darstellungen
+v =
+n
+X
+r=1
+vr · er
+bzw.
+w =
+n
+X
+s=1
+ws · es
+(7.96)
+Dann gilt
+⟨v, w⟩=
+
+v1
+. . .
+vn 
+·
+
+
+g11
+. . .
+g1n
+...
+...
+...
+gn1
+. . .
+gnn
+
+·
+
+
+w1
+...
+wn
+
+= vT · g · w.
+(7.97)
+Beweis: Durch Einsetzen der Basis-Darstellungen und mit Hilfe der Bilinearität des Skalar-
+Produkts erhalten wir
+⟨v, w⟩=
+*
+n
+X
+r=1
+vr · er ,
+n
+X
+s=1
+ws · es
++
+=
+n
+X
+r=1
+n
+X
+s=1
+vr · ws · ⟨er , es⟩=
+n
+X
+r=1
+n
+X
+s=1
+vr · ws · grs
+=
+n
+X
+r=1
+vr ·
+n
+X
+s=1
+grs · ws =
+
+v1
+. . .
+vn 
+·
+
+
+g11 · w1 + g12 · w2 + . . . + g1n · wn
+...
+gn1 · w1 + gn2 · w2 + . . . + gnn · wn
+
+
+=
+
+v1
+. . .
+vn 
+·
+
+
+g11
+. . .
+g1n
+...
+...
+...
+gn1
+. . .
+gnn
+
+·
+
+
+w1
+...
+wn
+
+= vT · g · w.
+(7.98)
+Damit haben wir den Satz bewiesen.
+Bemerkungen:
+i) Durch die metrische Skalar-Produkt-Formel kann das Skalar-Produkt in einem beliebi-
+gen Vektorraum mit fix gewählter Basis aus den Komponenten der Vektoren als Matrix-
+Produkt mit drei Faktoren berechnet werden.
+ii) In einem Vektorraum kann ein Skalar-Produkt definiert werden durch Angabe einer Basis
+und deren Metrik.
+iii) In Rn mit Gram-Riemann-Skalar-Produkt folgt
+⟨v, w⟩= vT · g · w = vT · 1 · w = vT · w.
+(7.99)
+II-71

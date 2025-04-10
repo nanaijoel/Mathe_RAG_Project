@@ -1,0 +1,100 @@
+Kapitel 4
+Taylor-Entwicklungen
+4.1
+Maclaurin-Entwicklungen
+4.1.1
+Maclaurin-Formel
+Wir betrachten den folgenden Satz.
+Satz 4.1
+Maclaurin-Entwicklung
+Seien n ∈N, x ∈R und f : R →R unendlich oft differentierbar. Dann gilt
+f(x) = Tn(x) + Rn(x),
+(4.1)
+mit dem Maclaurin-Polynom Tn(x) und Restglied Rn(x) gemäss
+Tn(x) =
+n
+X
+k=0
+f (k)(0)
+k!
+· xk = f(0) + f ′(0) · x + f ′′(0)
+2!
+· x2 + . . . + f (n)(0)
+n!
+· xn
+Rn(x) = (−1)n
+n!
+Z x
+0
+f (n+1)(s) · (s −x)n ds.
+(4.2)
+Beweis: Zunächst bemerken wir, dass gilt
+f(x) −f(0) =
+h
+f(s)
+i
+x
+0 =
+Z x
+0
+f ′(s) ds
+ + f(0).
+(4.3)
+Daraus und durch n-fache partielle Integration folgt
+f(x) = f(0) +
+Z x
+0
+f ′(s) ds = f(0) +
+Z x
+0
+↓
+f ′(s) ·
+↑
+1 ds
+= f(0) +
+h
+f ′(s) · (s −x)
+i
+x
+0 −
+Z x
+0
+↓
+f ′′(s) ·
+↑
+(s −x) ds
+= f(0) + f ′(0) · x −
+
+f ′′(s) · (s −x)2
+2
+
+x
+0
++
+Z x
+0
+↓
+f ′′′(s) ·
+↑
+(s −x)2
+2
+ds
+= f(0) + f ′(0) · x + f ′′(0)
+2
+· x2 +
+
+f ′′′(s) · (s −x)3
+2 · 3
+
+x
+0
+−
+Z x
+0
+↓
+f (4)(s) ·
+↑
+(s −x)3
+2 · 3
+ds
+I-73

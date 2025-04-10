@@ -1,0 +1,48 @@
+vi) Das Taylor-Polynom für n = 1 heisst auch Linearisierung von f an der Stelle x0. Es
+gilt
+T1(x) = f(x0) + f ′(x0) · (x −x0).
+(4.22)
+Der Graph von T1 ist offensichtlich die Tangente an den Funktionsgraphen von f an der
+Stelle x0.
+vii) Ist f selbst ein Polynom vom Grad p ∈N, dann ist f auf ganz R analytisch und es gilt
+Tn(x) = f(x)
+für alle n ≥p.
+(4.23)
+viii) Beispiel-Codes zur Berechnung von Taylor-Entwicklungen mit gängiger Software.
+Mathematica/WolframAlpha
+Series[Exp[x],{x,x_0,n}]
+Python/Sympy
+import sympy as sp;
+sp.series(sp.exp(x),x,x_0,n+1);
+4.2.2
+Anwendung lokale Extrema
+Wir betrachten den folgenden Satz aus der Kurvendiskussion.
+Satz 4.4
+Lokale Extrema - erweiterte Kriterien
+Seien f : R →R eine genügend of differentierbare, reelle Funktion, xk ∈R und m ∈N+ \ {1},
+so dass
+0 = f ′(xk) = f ′′(xk) = . . . = f (m−1)(xk)
+(4.24)
+0 ̸= f (m)(xk).
+(4.25)
+Dann gilt folgendes.
+(a) Falls m gerade und f (m)(xk) < 0, dann hat f bei xk einen Hoch-Punkt.
+(b) Falls m gerade und f (m)(xk) > 0, dann hat f bei xk einen Tief-Punkt.
+(c) Falls m ungerade, dann hat f bei xk einen Sattel-Punkt.
+Beweis: Wir betrachten die Taylor-Entwicklung von f der Ordnung m an der Stelle xk. Für
+alle x ∈R nahe genug bei xk gilt
+f(x) = Tm(x) + Rm(x) ≈Tm(x) = f(xk) + f (m)(xk)
+m!
+· (x −xk)m.
+(4.26)
+Wir betrachten die Fälle m gerade und m ungerade getrennt.
+Fall 1: m gerade. In diesem Fall hat Tm und somit auch f bei xk ein lokales Extremum. Aus dem
+Vorzeichen des Faktors vor der Potenz (x −xk)m lässt sich der Typ des lokalen Extremums
+ablesen. Es gilt
+f (m)(xk) < 0 ⇒Tm und somit auch f hat bei xk einen Hoch-Punkt,
+(4.27)
+f (m)(xk) > 0 ⇒Tm und somit auch f hat bei xk einen Tief-Punkt.
+(4.28)
+Fall 2: m ungerade. In diesem Fall hat Tm und somit auch f bei xk einen Sattel-Punkt.
+Damit haben wir den Satz bewiesen.
+I-78

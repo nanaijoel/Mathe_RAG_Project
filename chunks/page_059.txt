@@ -1,0 +1,24 @@
+2.6.4
+Zerlegungssatz
+Wir betrachten den folgenden Satz.
+Satz 2.23
+Zerlegungssatz für Vektorfelder in 3D
+Jedes differentierbare Vektorfeld v : R3 →R3 lässt sich zerlegen in eine Summe aus einem
+wirbelfreien Vektorfeld q : R3 →R3, einem quellenfreien Vektorfeld w : R3 →R3 und einem
+homogenen Vektorfeld h : R3 →R3 gemäss
+v = w + q + h.
+(2.186)
+Bemerkungen:
+i) Bei einer solchen Zerlegung ist w ein reines Wirbelfeld und q ein reines Quellenfeld.
+ii) Für jedes differentierbare Vektorfeld gibt es unendlich viele Möglichkeiten eine Zerlegung
+der Form (2.186) zu wählen.
+iii) Gemäss den Potential-Sätzen hat q ein Skalarpotential ϕ und w ein Vektorpotential A,
+so dass gilt
+q = ∇ϕ
+und
+w = rot(A).
+(2.187)
+Mit Hilfe dieser Potentiale lässt sich die Zerlegung (2.186) schreiben gemäss
+v = w + q + h = rot(A) + ∇ϕ + h.
+(2.188)
+I-53

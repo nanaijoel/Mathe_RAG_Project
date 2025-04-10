@@ -1,0 +1,58 @@
+Die folgenden geometrischen Eigenschaften von orthogonalen Abbildungen bzw. Matrizen zeich-
+nen diese aus.
+Satz 6.9
+Invarianzen von orthogonalen Abbildungen
+Seien n ∈N+ und A ∈O(n). Dann gilt für alle Vektoren v, w ∈Rn folgendes.
+(a) Skalar-Produkt-Invarianz:
+⟨A · v, A · w⟩= ⟨v, w⟩
+(6.67)
+(b) Längen-Invarianz:
+|A · v| = |v|
+(6.68)
+(c) Winkel-Invarianz:
+∡(A · v, A · w) = ∡(v, w)
+(6.69)
+Beweis: Mit Hilfe der Rechenregel (6.64) und weil A orthogonal ist, finden wir
+⟨A · v, A · w⟩=
+
+AT · A · v, w
+
+=
+
+A−1 · A · v, w
+
+= ⟨v, w⟩.
+(6.70)
+Daraus folgt sofort auch
+|A · v| =
+p
+⟨A · v, A · v⟩=
+p
+⟨v, v⟩= |v|.
+(6.71)
+Wir betrachten die Fälle 0 ∈{v, w} und 0 ̸∈{v, w} getrennt.
+Fall 1: Es sei 0 ∈{v, w}. In diesem Fall gilt auch 0 ∈{A · v, A · w} und es folgt
+∡(A · v, A · w) = π
+2 = ∡(v, w).
+(6.72)
+Fall 2: Es sei 0 ̸∈{v, w}. In diesem Fall gilt auch 0 ̸∈{A · v, A · w} und es folgt
+∡(A · v, A · w) = arccos
+ ⟨A · v, A · w⟩
+|A · v| · |A · w|
+
+= arccos
+ ⟨v, w⟩
+|v| · |w|
+
+= ∡(v, w).
+(6.73)
+Damit haben wir alle Aussagen und den Satz bewiesen.
+Bemerkungen:
+i) Die letzten beiden Invarianz-Eigenschaften aus Satz 6.9 werden auch Längentreue und
+Winkeltreue genannt. Orthogonale Abbildungen sind demnach Kongruenz-Abbildungen im
+Sinne der klassischen Geometrie. Das Umgekehrte gilt jedoch nicht, denn es gibt auch
+Kongruenz-Abbildungen die nicht linear sind und folglich auch nicht orthogonal sein kön-
+nen, z.B. Translationen.
+ii) Tatsächlich sind die Abbildungen in O(n) gerade die Spiegelungen und Drehungen in Rn
+sowie deren Verknüpfungen.
+II-34

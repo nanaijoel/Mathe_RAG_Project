@@ -1,0 +1,29 @@
+2.3.1.4
+Integration über allgemeine Gebiete
+Mit Hilfe des Fubini-Satzes können auch Integrale über allgemeinere Gebiete G ⊂R berechnet.
+Wir zeigen im folgenden eine Auswahl von besonders häufig auftretenden Fällen.
+1. Wir betrachten ein in y-Richtung durch Graphen begrenztes Gebiet, wie im folgendem
+x-y-Diagramm dargestellt.
+Gemäss Fubini-Satz erhalten wir in diesem Fall
+Z
+G
+f dA =
+Z xE
+x0
+Z v(x)
+u(x)
+f(x; y) dy dx.
+(2.87)
+2. Wir betrachten ein in x-Richtung durch Graphen begrenztes Gebiet, wie im folgendem
+x-y-Diagramm dargestellt.
+Gemäss Fubini-Satz erhalten wir in diesem Fall
+Z
+G
+f dA =
+Z yE
+y0
+Z v(y)
+u(y)
+f(x; y) dx dy.
+(2.88)
+I-29

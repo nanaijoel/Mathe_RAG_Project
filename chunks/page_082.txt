@@ -1,0 +1,80 @@
+= p
+n!
+Z x
+0
+es · |s −x|n ds ≤p
+n!
+Z x
+0
+e|x| · |0 −x|n ds = p
+n!
+Z x
+0
+e|x| · |x|n ds
+= e|x| · |x|n · p
+n!
+Z x
+0
+1 ds = e|x| · |x|n
+n! · p ·
+h
+s
+i
+x
+0 = e|x| · |x|n
+n! · p · (x −0)
+= e|x| · |x|n
+n! · p · x = e|x| · |x| · |x|n
+n!
+n→∞
+−−−→e|x| · |x| · 0 = 0.
+(4.14)
+Somit ist exp auf ganz R analytisch und kann dargestellt werden durch die Maclaurin-Reihe
+exp(x) =
+∞
+X
+k=0
+xk
+k! = 1 + x + x2
+2! + x3
+3! + x4
+4! + x5
+5! + . . . .
+(4.15)
+Siehe Übungen für die andern Funktionen.
+Bemerkungen:
+i) Es ist heute allgemein üblich, diese Elementarfunktionen durch ihre Maclaurin-Reihen
+zu definieren.
+ii) Die Maclaurin-Entwicklungen dieser Elementarfunktionen sind in modernen Taschen-
+rechnern, PCs und auch Grossrechnern hardwareseitig implementiert.
+iii) Die Maclaurin-Reihe der natürlichen Exponentialfunktion wird Exponentialreihe ge-
+nannt. Durch Einsetzen von x = 1 erhält man für die Euler-Zahl die bekannte Reihen-
+darstellung
+e = exp(1) =
+∞
+X
+k=0
+1
+k! = 1 + 1 + 1
+2! + 1
+3! + 1
+4! + 1
+5! + . . . .
+(4.16)
+iv) Die Maclaurin-Entwicklungen dürfen Termweise abgeleitet werden, wordurch die be-
+kannten Ableitungsregeln offensichtlich werden.
+v) Die Maclaurin-Entwicklungen zeigen deutlich die Verwandtschaft zwischen trigonome-
+trischen und hyperbolischen Funktionen.
+4.1.3
+Anwendungen
+Maclaurin-Entwicklungen haben zahlreiche Anwendungen.
+• Definition von Funktionen
+• Numerische Berechnung von Funktionswerten
+• Numerische Näherungen von Funktionswerten
+• Vereinfachungen von Funktionen in der Nähe von 0 (z.B. Kleinwinkelnäherungen)
+• Linearisierungen von Differentialgleichungen (z.B. in der Regelungstechnik)
+• Untersuchung einer Funktion in der Nähe von 0
+• Untersuchung von Beziehungen zwischen Funktionen (z.B. Euler-Formel)
+• Übergänge zwischen Modellen (z.B. Relativitätstheorie und Newton-Mechanik)
+• Informationstheorie
+I-76

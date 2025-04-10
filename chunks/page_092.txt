@@ -1,0 +1,54 @@
+5.3
+Quadratische Gleichungen
+Wir betrachten eine quadratische Gleichung mit reellen Koeffizienten a, b, c ∈R mit a ̸= 0 der
+Form
+a z2 + b z + c = 0.
+(5.20)
+Dabei suchen wir alle komplexen Lösungen z ∈C dieser Gleichung. Zunächst betrachten die
+Diskriminante
+D := b2 −4 · a · c.
+(5.21)
+Je nach Vorzeichen der Diskriminante ergeben sich unterschiedliche Lösungsmengen. Wir be-
+trachten diese Fälle getrennt.
+Fall 1: Fall D > 0. In diesem Fall erhalten wir zwei reelle Lösungen
+z1,2 = −b ±
+√
+D
+2 · a
+.
+(5.22)
+Fall 2: Fall D = 0. In diesem Fall erhalten wir eine reelle Lösung
+z = xs = −b
+2 · a .
+(5.23)
+Fall 3: Fall D < 0. In diesem Fall erhalten wir zwei komplexe Lösungen
+z1,2 = −b ±
+√
+D
+2 · a
+= −b ± i ·
+p
+|D|
+2 · a
+= −b
+2 · a ± i ·
+p
+|D|
+2 · a .
+(5.24)
+Bemerkungen:
+i) Jede quadratische Gleichung mit reellen Koeffizienten hat demnach in C mindestens 1
+Lösung und höchstens 2 Lösungen.
+ii) Im Fall D < 0 gilt
+Re(z1) = Re(z2) = xs = −b
+2 · a
+(5.25)
+Im(z1) = −Im(z2).
+(5.26)
+Daraus folgt, dass die beiden Lösungen zueinander komplex konjugiert sind, d.h.
+z2 = z∗
+1.
+(5.27)
+iii) Quadratische Gleichungen mit nichtreellen Koeffizienten haben so gut wie keine Anwen-
+dungen in der Praxis.
+II-8

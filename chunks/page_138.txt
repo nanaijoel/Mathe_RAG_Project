@@ -1,0 +1,38 @@
+6.5.5
+Spezielle Eigenwerte & Eigenvektoren
+Für einige Abbildungsmatrizen kann man die Eigenwerte und Eigenvektoren direkt aus ihren
+geometrischen Eigenschaften ablesen. Wir machen dazu folgende Bemerkungen.
+i) Es gilt Spec(0) = {0} und jedes E ∈Rn ist Eigenvektor der Nullmatrix.
+ii) Es gilt Spec(1) = {1} und jedes E ∈Rn ist Eigenvektor der Einheitsmatrix.
+iii) A singulär ⇔0 ∈Spec(A)
+iv) A ∈O(n) ⇒Spec(A) ⊆{−1, 1}
+v) A eine Spiegelung ⇒−1 ∈Spec(A)
+vi) Für eine Diagonalmatrix gilt:
+D =
+
+
+λ1
+0
+. . .
+0
+0
+λ2
+. . .
+0
+...
+...
+...
+...
+0
+0
+. . .
+λn
+
+
+⇒Spec(D) ⊆{λ1, . . . , λn}.
+(6.176)
+Die Einheitseigenvektoren zu jedem Eigenwert sind gerade die Einheitsvektoren entlang
+der Achsen, d.h.
+ˆEk = ˆek.
+(6.177)
+II-54

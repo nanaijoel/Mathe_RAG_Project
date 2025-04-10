@@ -1,0 +1,84 @@
+Ferner berechnen wir
+tr(B · A) =
+n
+X
+s=1
+n
+X
+r=1
+Bs
+r · Ar
+s =
+n
+X
+s=1
+n
+X
+r=1
+Ar
+s · Bs
+r =
+n
+X
+r=1
+n
+X
+s=1
+Ar
+s · Bs
+r = tr(A · B).
+(6.97)
+Damit haben wir alle Aussagen und den Satz bewiesen.
+Bemerkungen:
+i) Die Spur kann selbst als lineare Abbildung des Typs tr : M(n, n, R) →R aufgefasst werden.
+ii) Bei der Anwendung der Regel (d) aus Satz 6.13 auf Produkte von mehr als zwei Matrizen
+ist Vorsicht geboten. Für drei Matrizen gilt
+tr(A · B · C) = tr(C · A · B) = tr(B · C · A)
+(6.98)
+tr(A · C · B) = tr(B · A · C) = tr(C · B · A).
+(6.99)
+Die Gleichheit der Werte der beiden Zeilen muss jedoch nicht gelten. Die Spur bleibt
+im allgemeinen nur erhalten, wenn man die Faktoren eines Matrix-Produkts zyklisch ver-
+tauscht. Bei beliebigen Änderungen der Reihenfolge kann der Wert der Spur sich auch
+ändern.
+6.4.3
+Determinante
+6.4.3.1
+Definition
+Die Definition der Determinante nach der bekannten Leibniz-Formel basiert auf dem Begriff
+der Permutationen. Dies benötigt ein paar Vorbereitungen.
+Definition 6.19
+Permutation & symmetrische Gruppe
+Sei n ∈N+. Die symmetrische Gruppe vom Grad n ist die Menge der n-stelligen Permutationen,
+d.h.
+Sn :=
+n
+p : {1, . . . , n} →{1, . . . , n}
+ p ist bijektiv
+o
+(6.100)
+Bemerkungen:
+i) Eine Permutation p ∈Sn kann interpretiert werden als Umordnung bzw. Umsortierung
+der natürlichen Zahlen in {1, . . . , n}.
+ii) Permutationen haben ihre Hauptanwendung in der Kombinatorik, wenn es darum geht
+n unterscheidbare Objekte auf n unterscheidbare Plätze zu verteilen. S6 entspricht dabei
+z.B. der Menge aller Möglichkeiten um 6 Autos auf 6 Parkplätze zu verteilen.
+iii) Üblicherweise wird eine Permutation p ∈Sn als 2 × n-Matrix dargestellt gemäss
+
+1
+2
+. . .
+n
+p(1)
+p(2)
+. . .
+p(n)
+
+.
+(6.101)
+Beispiele:
+• S1 =
+ 1
+1
+
+II-41

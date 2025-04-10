@@ -1,0 +1,58 @@
+S3
+Für N gross genug erhält man in guter Näherung
+A ≈
+N
+X
+k=1
+δAk =
+N
+X
+k=1
+f(xk) · δx.
+(1.7)
+Unter Verwendung des modernen Cauchy-Grenzwertbegriffs erhält man
+A =
+Z xE
+x0
+f(x) dx = lim
+N→∞
+N
+X
+k=1
+f(xk) · δx ≈
+N
+X
+k=1
+f(xk) · δx.
+(1.8)
+Bemerkungen:
+i) Aus (1.8) lässt sich die Herkunft des “Integral-Hakens” erkennen: Es ist ein grosses “S”
+für Summe. Analog wurde aus dem Faktor δx das Differentialsymbol dx.
+ii) Früher berechnete man Integrale im Sinne von (1.8) näherungsweise durch Summen .
+iii) Heute berechnet man Summen im Sinne von (1.8) durch Integrale mit Hilfe der Newton-
+Leibniz-Formel.
+1.2.3
+Konzeption am Urbeispiel
+Wir betrachten den Graphen einer stetigen Funktion f : R →R entlang eines reellen Intervalls
+[x0, xE]. Die Situation ist im folgenden x-y-Diagramm dargestellt.
+Um die Fläche zwischen der x-Achse oberhalb des Intervalles [x0, xE] und dem Graphen von f
+zu berechnen, verwenden wir einen Archimedes-Cauchy-Riemann-Approximationsprozess.
+Dabei gehen wir nach folgenden Schritten vor.
+S1
+Lokal: Wir betrachten einen kleinen Streifen an der Position x der Breite δx. Die Fläche
+dieses Streifens beträgt
+δA ≈f(x) · δx.
+(1.9)
+S2
+Global: Durch Integration über x können wir die gesamte Fläche A berechnen. Wir erhalten
+A =
+Z xE
+x0
+f(x) dx =
+h
+F(x)
+i
+xE
+x0 = F(xE) −F(x0).
+(1.10)
+I-6

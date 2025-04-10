@@ -1,0 +1,55 @@
+iii) Durch Normierung erhält man aus dem Normalen-Vektor den Einheitsnormalen-Vektor
+ˆn := ± 1
+|n| · n.
+(2.103)
+iv) Für geschlossene Flächen M wird das Vorzeichen des Einheitsnormalen-Vektors so ge-
+wählt, dass ˆn überall nach aussen zeigt.
+2.4.1.4
+Metrik
+Wir betrachten folgende Definition.
+Definition 2.14
+Metrik
+Die Metrik einer parametrisierten Fläche ist die Gram-Matrix der Koordinatenbasis-Vektorfelder,
+d.h.
+G :=
+ g11
+g12
+g21
+g22
+
+:=
+ ⟨e1 , e1⟩
+⟨e1 , e2⟩
+⟨e2 , e1⟩
+⟨e2 , e2⟩
+
+.
+(2.104)
+Bemerkungen:
+i) Weil das Skalar-Produkt symmetrisch ist, gilt dies auch für G, d.h.
+GT = G.
+(2.105)
+ii) Weil das Skalar-Produkt positiv definit ist, gilt dies auch für G, d.h.
+g := det(G) = g11 · g22 −g21 · g12 > 0.
+(2.106)
+iii) In vielen Anwendungen stehen die Koordinatenbasis-Vektorfelder senkrecht aufeinander.
+Allgemein gilt
+e1 ⊥e2 ⇔G ist diagonal.
+(2.107)
+2.4.1.5
+Mass-Funktion
+Wir betrachten folgende Definition.
+Definition 2.15
+Mass-Funktion
+Seien G die Metrik einer parametrisierten Fläche und
+g := det(G),
+(2.108)
+dann ist die Mass-Funktion die Wurzel √g.
+Wir betrachten folgenden Satz.
+Satz 2.8
+Normalen-Vektor & Mass-Funktion
+Seien n der Normalen-Vektor und √g die Mass-Funktion einer parametrisierten Fläche, dann
+gilt
+√g = |n|.
+(2.109)
+I-36

@@ -1,0 +1,57 @@
+Kapitel 6
+Matrizen & Lineare Abbildungen
+6.1
+Matrix-Algebra
+6.1.1
+Definition
+Wir machen folgende Definition.
+Definition 6.1
+Matrix
+Seien m, n ∈N+. Eine reelle m×n-Matrix A ist eine Zahlentabelle mit m Zeilen und n Spalten
+der Form
+A =
+
+
+A11
+A12
+. . .
+A1n
+A21
+A22
+. . .
+A2n
+...
+...
+...
+...
+Am1
+Am2
+. . .
+Amn
+
+
+,
+(6.1)
+wobei alle Aij ∈R.
+Bemerkungen:
+i) Die Zahlen m und n heissen Dimensionen der Matrix A.
+ii) Die reellen Zahlen Aij heissen Komponenten der Matrix A. Eine m × n-Matrix besteht
+offensichtlich aus m · n Komponenten.
+iii) Wir werden später sehen, dass es sinnvoll ist, den Zeilen-Index i oben und den Spalten-
+Index j unten zu schreiben.
+iv) Für die Menge aller reellen m × n-Matrizen gibt es verschiedene Bezeichnungen. Wir
+verwenden
+M(m, n, R) = Rm×n.
+(6.2)
+v) Wir betrachten die Matrix
+M =
+ 1
+2
+3
+4
+5
+6
+
+.
+(6.3)
+II-13

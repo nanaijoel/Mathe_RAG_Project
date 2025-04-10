@@ -1,0 +1,44 @@
+Anwendungen:
+• Mechanik: Arbeitsintegral gemäss
+∆W =
+Z sE
+s0
+⟨F(s), ˆe⟩ds.
+(2.60)
+• Elektrodynamik: Elektrische Spannung gemäss
+U =
+Z sE
+s0
+⟨E, ˆe⟩ds.
+(2.61)
+Wir betrachten den folgenden Satz.
+Satz 2.1
+Linienintegral bei konstantem Anteil entlang der Bahn
+Seien n ∈N+, τ0, τE ∈R mit τ0 < τE, s : [τ0, τE] →Rn eine parametrisierte Kurve mit
+Bahnvektor ˆe(τ) und Bogenlänge ∆s sowie w : Rn →Rn ein Vektorfeld. Gilt entlang der Bahn
+der Kurve ⟨w, ˆe⟩=: C ≡konst., dann beträgt das Linienintegral von w entlang der Kurve
+I = C · ∆s.
+(2.62)
+Beweis: Für das Linienintegral von w entlang der Kurve erhalten wir
+I =
+Z τE
+τ0
+⟨w, v⟩dτ =
+Z sE
+s0
+⟨w, ˆe⟩ds =
+Z sE
+s0
+C ds = C
+Z sE
+s0
+1 ds = C ·
+h
+s
+i
+sE
+s0 = C · (sE −s0)
+= C · ∆s.
+(2.63)
+Damit haben wir den Satz bewiesen.
+I-23

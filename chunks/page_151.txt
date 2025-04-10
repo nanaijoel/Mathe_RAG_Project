@@ -1,0 +1,66 @@
+7.3.1.2
+Mass-Formeln
+Mit Hilfe eines Skalar-Produkts lassen sich Masse (Längen, Flächen, Volumen, etc..) definieren.
+Wir betrachten dazu die folgende Definition.
+Definition 7.12
+Gram-Matrix
+Seien (V, K, +, ·) ein Vektorraum über dem Zahlenkörper K, m ∈N+ und v1, . . . , vm ∈V . Die
+Gram-Matrix dieser Vektoren ist
+G(v1; . . . ; vm) :=
+
+
+⟨v1 , v1⟩
+⟨v1 , v2⟩
+. . .
+⟨v1 , vm⟩
+⟨v2 , v1⟩
+⟨v2 , v2⟩
+. . .
+⟨v2 , vm⟩
+...
+...
+...
+...
+⟨vm , v1⟩
+⟨vm , v2⟩
+. . .
+⟨vm , vm⟩
+
+
+.
+(7.65)
+Bemerkungen:
+i) Die Komponenten der Gram-Matrix sind gerade alle möglichen Skalar-Produkte, die sich
+aus den Vektoren v1, . . . , vm bilden lassen. Davon gibt es insgesamt m2 und konsequen-
+terweise gilt G ∈M(m, m, K).
+ii) Wegen SP-2 muss gelten
+GT = G∗.
+(7.66)
+iii) Je nach Wahl von K ∈{R, C} ergeben sich daraus unterschiedliche Eigenschaften der
+Gram-Matrix. Es gilt
+K = R ⇒GT = G
+(symmetrisch)
+(7.67)
+K = C ⇒GT = G∗
+(hermitesch).
+(7.68)
+iv) Für K ∈{R, C} und ein positiv definites Skalar-Produkt muss gelten
+det(G) ≥0.
+(7.69)
+Wir betrachten die folgende Definition.
+Definition 7.13
+Mass
+Seien (V, K, +, ·) ein Vektorraum über dem Zahlenkörper K ∈{R, C}, m ∈N+ und v1, . . . , vm ∈
+V . Das Mass der Vektoren ist
+µ(v1; . . . ; vm) :=
+p
+| det(G)| .
+(7.70)
+Wir betrachten den folgenden Satz.
+Satz 7.9
+Regularität des Masses
+Seien (V, K, +, ·) ein Vektorraum über dem Zahlenkörper K ∈{R, C}, m ∈N+ und v1, . . . , vm ∈
+V . Dann gilt
+µ(v1; . . . ; vm) = 0 ⇔G(v1; . . . ; vm) singulär ⇔{v1, . . . , vm} linear abhängig.
+(7.71)
+II-67

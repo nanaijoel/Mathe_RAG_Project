@@ -1,0 +1,31 @@
+2.1.2.2
+Eigenschaften
+Wir betrachten folgende Definition.
+Definition 2.4
+Einheitsvektorfeld
+Seien n ∈N+ \ {1}, A, B ⊆Rn, dann ist ein Vektorfeld v : A →B ein Einheitsvektorfeld, falls
+für alle p ∈A gilt
+v(p) = ˆv(p).
+(2.34)
+Bemerkungen:
+i) Bei einem Einheitsvektorfeld wird an jedem Punkt p ∈A ein Einheitsvektor “angehängt”.
+ii) Wenn ein Vektorfeld als Einheitsvektorfeld identifiziert ist, dann wird es in der Notation
+sinnvollerweise durch einen Hut gekennzeichnet.
+iii) Wie alle Einheitsvektoren, tragen auch die Vektoren eines Einheitsvektorfeldes keine Mass-
+einheit.
+iv) Die Bezeichnungen Einheitsvektorfeld und Richtungsvektorfeld sind synonym.
+Wir betrachten folgende Definition.
+Definition 2.5
+Homogenes Vektorfeld
+Seien n ∈N+ \ {1}, A, B ⊆Rn, dann ist ein Vektorfeld v : A →B homogen, falls es ein w ∈B
+gibt, so dass für alle p ∈A gilt
+v(p) = w.
+(2.35)
+Bemerkungen:
+i) Ein homogenes Vektorfeld ist einfach ein konstantes Vektorfeld.
+ii) Bei einem homogenen Vektorfeld wird an jedem Punkt p ∈A der gleiche Vektor w “an-
+gehängt”.
+2.1.2.3
+Visualisierung
+Siehe Demonstration von Quiver-Plots.
+I-17

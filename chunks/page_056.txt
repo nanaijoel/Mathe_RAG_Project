@@ -1,0 +1,65 @@
+Anwendungen:
+• Strömungsdynamik: Aus der Inkompressibilität einer Flüssigkeit folgt die Quellenfreiheit des
+Geschwindigkeitsvektorfeldes v und somit das Verschwinden der Perforation von v durch eine
+beliebige Oberfläche ∂V .
+• Elektrodynamik: Die Maxwell-Gleichungen für die Divergenz des E-Feldes und B-Feldes
+lauten
+div(E) = 1
+ε0
+· ρ
+(2.168)
+div(B) = 0.
+(2.169)
+Für die Perforation des E-Feldes und B-Feldes durch eine beliebige Oberfläche ∂V folgt aus
+dem Gauss-Integralsatz
+ΦE =
+I
+∂V
+⟨E, ˆn⟩dA =
+Z
+V
+div(E) dV =
+Z
+V
+1
+ε0
+· ρ dV = 1
+ε0
+Z
+V
+ρ dV = 1
+ε0
+· Qeg
+(2.170)
+ΦB =
+I
+∂V
+⟨B, ˆn⟩dA =
+Z
+V
+div(B) dV =
+Z
+V
+0 dV = 0.
+(2.171)
+• Erhaltungssätze
+• Volumen-Berechnungen
+• Geometrische Analysis
+2.6.2
+Stokes-Integralsatz
+Wir betrachten ein Gebiet G ⊂R3 mit Randkurve ∂G, welche das Einheitsnormalen-Vektorfeld
+ˆn rechts umläuft im Bereich eines Vektorfeldes v : R3 →R3. Die Situation ist in der folgenden
+Skizze dargestellt.
+Wir betrachten den folgenden Satz.
+Satz 2.20
+Stokes-Integralsatz in 3D
+Seien G ⊂R3 ein Gebiet mit Randkurve ∂G, welche das Einheitsnormalen-Vektorfeld ˆn rechts
+umläuft im Bereich eines Vektorfeldes v : R3 →R3, dann gilt
+I
+∂G
+⟨v, ˆe⟩ds = Υv =
+Z
+G
+⟨rot(v), ˆn⟩dA.
+(2.172)
+I-50

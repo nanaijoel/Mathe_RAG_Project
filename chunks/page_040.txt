@@ -1,0 +1,29 @@
+Beispiele:
+• Eine Ebene, welche durch den Punkt P0 verläuft und aufgespannt wird durch die beiden
+Vektoren v und w.
+Das Karten-Gebiet ist U = R2 und die übliche Parametrisierung lautet
+P(u; v) = P0 + u · v + v · w.
+(2.99)
+Diese Parametrisierung ist eine bijektive Abbildung zwischen der ganzen u-v-Ebene und der
+zu parametrisierenden Ebene M in 3D.
+• Eine Sphäre mit Radius R > 0 und Mittelpunkt am Ursprung.
+Das Karten-Gebiet ist U = [0, π] × [0, 2π[ und die übliche Parametrisierung lautet
+P(θ; φ) =
+
+
+x(θ; φ)
+y(θ; ϕ)
+z(θ; φ)
+
+=
+
+
+R · sin(θ) · cos(φ)
+R · sin(θ) · sin(φ)
+R · cos(θ)
+
+.
+(2.100)
+Diese Parametrisierung ist nicht injektiv, weil die Strecken {0} × [0, 2π[ und {π} × [0, 2π[
+jeweils als Ganzes auf den Nord- bzw. Südpol der Sphäre abgebildet werden.
+I-34

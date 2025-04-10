@@ -1,0 +1,124 @@
+5.4.4
+Wurzeln
+Es gibt verschiedene Konventionen, was eine Wurzel mit komplexem Radikanden bedeuten soll.
+1. Alte Konvention: Die Wurzel ist als Menge aller Lösungen der entsprechenden Potenz-
+Gleichung aufzufassen. Das Element mit dem kleinsten Argument gemäss Basler-Variante
+wird dabei als Hauptwert bezeichnet und die anderen Elemente als Nebenwerte. Beispiele:
+•
+√
+4 =
+
+4
+|{z}
+Hauptwert
+,
+−4
+|{z}
+Nebenwert
+	
+• √−4 =
+
+2 · i
+|{z}
+Hauptwert
+,
+−2 · i
+| {z }
+Nebenwert
+	
+•
+√
+4 · i =
+
+2 · ei· π
+4
+| {z }
+Hauptwert
+, 2 · e−i· π
+4
+| {z }
+Nebenwert
+	
+•
+3√−27 =
+
+3 · ei· π
+3
+| {z }
+Hauptwert
+, −3, 3 · e−i· π
+3
+|
+{z
+}
+Nebenwerte
+	
+2. Neue Konvention: Es wird zwischen reellen und komplexen Wurzeln unterschieden. Bei-
+spiele:
+•
+√
+4 = 2
+(reelle Lösung)
+• √−4
+existiert nicht
+•
+√
+4 · i
+existiert nicht
+•
+3√−27 = −3
+(reelle Lösung)
+•
+√
+4
+C = 2
+(reelle Lösung, Hauptwert)
+• √−4
+C = 2 · i
+(Hauptwert)
+•
+√
+4 · i
+C = 2 · ei· π
+4
+(Hauptwert)
+•
+3√−27
+C = 3 · ei· π
+3
+(Hauptwert)
+3. Allgemeine Praxis: Es werden nur reelle Radikanden zugelassen und reelle Lösungen vor
+Hauptwerten bevorzugt. Ansonsten werden keine Wurzeln verwendet. Beispiele:
+•
+√
+4 = 2
+(reelle Lösung, Hauptwert)
+• √−4 = 2 · i
+(Hauptwert)
+•
+3√−27 = −3
+(reelle Lösung)
+Generell ist im Umgang mit Wurzeln Vorsicht geboten, wie die folgende Rechnung zeigt. Man
+könnte vermeintlich zu Schluss kommen
+1 =
+√
+1 =
+p
+(−1) · (−1) =
+√
+−1 ·
+√
+−1 = i · i = i2 = −1.
+(5.47)
+Das dritte Gleichheitszeichen in der obigen Rechnung ist falsch. Allgmein gilt für alle Wurzel-
+Konventionen
+√x · y = √x · √y
+für
+x, y ∈R+
+(5.48)
+√w · z = ±√w · √z
+für
+w, z ∈C,
+(5.49)
+wobei das Vorzeichen von Fall zu Fall entschieden werden muss.
+II-12

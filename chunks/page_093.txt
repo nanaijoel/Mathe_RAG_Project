@@ -1,0 +1,48 @@
+5.4
+Potenzen
+5.4.1
+Euler-Formel
+Wir betrachten den folgenden Satz.
+Satz 5.4
+Euler-Formel
+Sei φ ∈R, dann gilt
+ei·φ = cis(φ) = cos(φ) + i · sin(φ).
+(5.28)
+Beweis: Übung mit Hilfe von Maclaurin-Entwicklungen.
+Wir betrachten den folgenden Satz.
+Satz 5.5
+Umkehrungen der Euler-Formel
+Sei φ ∈R, dann gilt folgendes.
+(a)
+sin(φ) = ei·φ −e−i·φ
+2 · i
+= −i · sinh(i · φ)
+(b)
+cos(φ) = ei·φ + e−i·φ
+2
+= cosh(i · φ)
+Beweis: Übung.
+Bemerkungen:
+i) Die Euler-Formel beschreibt die fundamentalen Zusammenhänge zwischen der natürli-
+chen Exponentialfunktion und den trigonometrischen bzw. hyperbolischen Funktionen.
+ii) Aus der Euler-Formel lässt sich eine einfache algebraische Beziehung zwischen den fun-
+damentalen Zahlen in {0, 1, e, π, i} herleiten. Es gilt
+ei·π + 1 = 0.
+(5.29)
+5.4.2
+Exponentielle Form
+Wir betrachten den folgenden Satz.
+Satz 5.6
+Exponentielle Form
+Seien x, y ∈R, r ∈R+ und φ ∈[0, 2π[ oder φ ∈]−π, π] dann gibt es ein eindeutiges z ∈C\{0}
+mit
+z = x + y · i = r · ei·φ.
+(5.30)
+Ferner gelten die folgenden Umrechnungsformeln.
+(a)
+x = r · cos(φ) ∧y = r · sin(φ)
+(b)
+r = |z| =
+p
+x2 + y2 ∧φ = arg(z)
+II-9

@@ -1,0 +1,61 @@
+4.2
+Taylor-Entwicklungen allgemein
+4.2.1
+Taylor-Formel
+Wir betrachten den folgenden Satz.
+Satz 4.3
+Taylor-Entwicklung
+Seien n ∈N, x, x0 ∈R und f : R →R unendlich oft differentierbar. Dann gilt
+f(x) = Tn(x) + Rn(x),
+(4.17)
+mit dem Taylor-Polynom Tn(x) und Restglied Rn(x) gemäss
+Tn(x) =
+n
+X
+k=0
+f (k)(x0)
+k!
+· (x −x0)k
+= f(x0) + f ′(x0) · (x −x0) + f ′′(x0)
+2!
+· (x −x0)2 + . . . + f (n)(x0)
+n!
+· (x −x0)n
+Rn(x) = (−1)n
+n!
+Z x
+x0
+f (n+1)(s) · (s −x)n ds.
+(4.18)
+Beweis: Analog zum Beweis der Maclaurin-Entwicklung.
+Besonders interessant ist die Situation, wenn das Restglied für grosse n immer kleiner wird.
+Dazu betrachten wir die folgende Definition.
+Definition 4.2
+Analytische Funktion
+Seien I ⊆R ein Intervall mit x0 ∈I und f : I →R eine unendlich oft differentierbare Funktion.
+Die Funktion f heisst analytisch auf I, falls für alle x ∈I gilt
+lim
+n→∞Rn(x) = 0.
+(4.19)
+Bemerkungen:
+i) Die Taylor-Entwicklung für x0 = 0 ist gerade die Maclaurin-Entwicklung.
+ii) Das Taylor-Polynom Tn(x) ist ein Polynom vom Grad n.
+iii) Um das Taylor-Polynom Tn(x) aufzustellen, müssen die Funktionswerte von f und ihren
+Ableitungen nur an der Stelle x0 bekannt sein.
+iv) Eine analytische Funktion lässt sich durch ihre Taylor-Reihe vollständig darstellen, d.h.
+für alle x ∈I gilt
+f(x) = lim
+n→∞Tn(x) =
+∞
+X
+k=0
+f (k)(x0)
+k!
+· (x −x0)k.
+(4.20)
+v) In jedem Fall, d.h. auch für nicht analytische Funktionen kann das Taylor-Polynom in
+der Nähe von x = x0 als Näherung für f verwendet werden, d.h. für x nahe genug bei x0
+und n gross genug gilt zumindest
+f(x) = Tn(x) + Rn(x) ≈Tn(x).
+(4.21)
+I-77

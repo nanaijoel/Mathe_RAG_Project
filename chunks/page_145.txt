@@ -1,0 +1,41 @@
+7.1.3
+Unterräume
+Eine Teilmenge eines Vektorraums kann selbst wieder ein Vektorraum sein. Dazu machen wir
+die folgende Definition.
+Definition 7.6
+Unterraum
+Sei (V, K, +, ·) ein Vektorraum. Eine Teilmenge W ⊆V heisst Unterraum von V , falls (W, K, +, ·)
+ebenfalls ein Vektorraum ist.
+Bemerkungen:
+i) In der Literatur werden Unterräume auch Teilräume genannt.
+ii) Um kompakt auszudrücken, dass W ⊆V nicht nur eine Teilmenge sondern ein Unterraum
+von V ist, verwendet man die Schreibweise
+W ≤V.
+(7.30)
+iii) Jeder Unterraum eines Vektorraums V muss mindestens 0 enthalten.
+iv) Jeder Vektorraum hat zumindest sich selbst und den trivialen Vektorraum als Unterraum.
+Für jeden Vektorraum V gilt also
+{0} ≤V
+und
+V ≤V.
+(7.31)
+Mit Hilfe des folgenden Satzes kann sehr einfach getestet werden, ob eine Teilmenge eines
+Vektorraums ein Unterraum ist.
+Satz 7.5
+Test auf Unterraum
+Sei (V, K, +, ·) ein Vektorraum und W ⊆V . Dann gilt
+W ≤V
+⇔span(W) = W.
+(7.32)
+Bemerkungen:
+i) Eine Teilmenge eines Vektorraums ist also genau dann ein Unterraum, wenn sie abge-
+schlossen ist unter der Bildung von Linearkombinationen.
+ii) Um nachzuweisen, das W ≤V muss man also zeigen, dass
+w1, w2 ∈W, x1, x2 ∈K ⇒x1 · w1 + x2 · w2 ∈W.
+(7.33)
+Beispiele:
+• Für jedes m, n ∈N+ mit m ≤n gilt Km ≤Kn.
+• Für jedes m, n ∈N+ mit m ≤n gilt Pm(R) ≤Pn(R).
+• Jede Gerade in der Ebene kann als Unterraum der Ebene aufgefasst werden.
+• Jede Gerade oder Ebene im Raum kann als Unterraum des Raumes aufgefasst werden.
+II-61

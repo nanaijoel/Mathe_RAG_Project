@@ -1,0 +1,48 @@
+6.3
+Orthogonale Matrizen
+6.3.1
+Definition
+Es gibt reguläre Matrizen, deren Inverse gerade auch ihre Transponierte ist. Dies ist eine sehr
+interessante Eigenschaft, die sowohl algebraische als auch geometrische Konsequenzen hat.
+Definition 6.15
+Orthogonale Matrix
+Sei n ∈N+. Eine reguläre Matrix A ∈M(n, n, R) heisst orthogonal, falls
+A−1 = AT.
+(6.52)
+Ferner definieren wir die Menge aller orthogonalen n × n-Matrizen.
+Definition 6.16
+Orthogonale Gruppe
+Sei n ∈N+. Die orthogonale Gruppe in nD ist die Menge
+O(n) :=
+
+A ∈M(n, n, R)
+ A−1 = AT 	
+.
+(6.53)
+Wir betrachten den folgenden Satz.
+Satz 6.6
+Orthogonale Gruppe
+Sei n ∈N+, dann bildet O(n) eine algebraische Gruppe, d.h. für alle A, B, C ∈O(n) gilt
+folgendes.
+(a) Endogenität:
+A · B ∈O(n)
+(b) Assoziativität:
+(A · B) · C = A · (B · C)
+(c) Neutrales Element:
+1 ∈O(n)
+(d) Inverse Elemente:
+A−1 ∈O(n)
+Bemerkungen:
+i) Offensichtlich gilt 1 ∈O(n) für alle n ∈N+, denn es gilt
+1−1 = 1 = 1T.
+(6.54)
+ii) Ist eine Matrix orthogonal und symmetrisch, dann folgt
+A−1 = AT = A ⇒A2 = A · A = A−1 · A = 1.
+(6.55)
+Die orthogonalen symmetrischen Matrizen verhalten sich wie Wurzeln der Einheitsmatrix.
+iii) Ist eine Matrix orthogonal und schiefsymmetrisch, dann folgt
+A−1 = AT = −A ⇒A2 = −A−1 · A = −1.
+(6.56)
+Die orthogonalen schiefsymmetrischen Matrizen verhalten sich ähnlich wie die imaginäre
+Einheit i ∈C.
+II-31

@@ -1,0 +1,129 @@
+6.4.4
+Mass-Formeln
+Mit Hilfe der Determinante lassen sich Begriffe wie Länge, Fläche, Volumen und entsprechen-
+de Verallgemeinerungen in beliebig dimensionalen Euklid-Räumen einführen und berechnen.
+Dazu machen wir folgende Definition.
+Definition 6.22
+Gram-Matrix
+Seien m, n ∈N+ und v1, . . . , vm ∈Rn. Die Gram-Matrix dieser Vektoren ist
+G(v1; . . . ; vm) :=
+
+
+⟨v1 , v1⟩
+⟨v1 , v2⟩
+. . .
+⟨v1 , vm⟩
+⟨v2 , v1⟩
+⟨v2 , v2⟩
+. . .
+⟨v2 , vm⟩
+...
+...
+...
+...
+⟨vm , v1⟩
+⟨vm , v2⟩
+. . .
+⟨vm , vm⟩
+
+
+.
+(6.134)
+Bemerkungen:
+i) Die Komponenten der Gram-Matrix sind gerade alle möglichen Skalar-Produkte, die sich
+aus den Vektoren v1, . . . , vm bilden lassen. Davon gibt es insgesamt m2 und konsequen-
+terweise gilt G ∈M(m, m, R).
+ii) Wegen der Symmetrie des Skalar-Produkts muss gelten
+GT = G,
+(6.135)
+d.h. G ist symmetrisch.
+iii) Wegen der positiven Definitheit des Skalar-Produkts muss gelten
+det(G) ≥0.
+(6.136)
+iv) Für die Standard-Einheitsvektoren gilt
+G(ˆe1; . . . ; ˆen) = 1.
+(6.137)
+v) Es sei A ∈M(n, m, R) die Matrix, deren Spalten gerade die Vektoren v1, . . . , vm sind, d.h.
+A =
+
+v1
+v2
+. . .
+vm
+
+.
+(6.138)
+Dann gilt
+AT · A =
+
+
+vT
+1
+vT
+2
+...
+vT
+m
+
+
+·
+
+v1
+v2
+. . .
+vm
+
+=
+
+
+vT
+1 · v1
+vT
+1 · v2
+. . .
+vT
+1 · vm
+vT
+2 · v1
+vT
+2 · v2
+. . .
+vT
+2 · vm
+...
+...
+...
+...
+vT
+m · v1
+vT
+m · v2
+. . .
+vT
+m · vm
+
+
+=
+
+
+⟨v1 , v1⟩
+⟨v1 , v2⟩
+. . .
+⟨v1 , vm⟩
+⟨v2 , v1⟩
+⟨v2 , v2⟩
+. . .
+⟨v2 , vm⟩
+...
+...
+...
+...
+⟨vm , v1⟩
+⟨vm , v2⟩
+. . .
+⟨vm , vm⟩
+
+
+= G.
+(6.139)
+II-48

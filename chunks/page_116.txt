@@ -1,0 +1,122 @@
+iv) Ganz besonders bequem lässt sich ein LGLS lösen, wenn die linke Seite eine orthogonale
+Matrix ist. Gilt A ∈O(n), dann folgt
+A · u = b
+ AT·
+(6.57)
+⇔
+AT · A · u = A−1 · A · u = AT · b
+(6.58)
+⇔
+1 · u = AT · b.
+(6.59)
+Daraus erhalten wir die Lösung
+u = AT · b.
+(6.60)
+Das LGLS ist demnach eindeutig lösbar und die Lösung lässt sich ganz einfach durch
+Multiplikation der rechten Seite von links mit der Transponierten von A berechnen.
+Beispiele:
+•
+ 0
+1
+1
+0
+
+•
+1
+√
+13 ·
+ −2
+3
+3
+2
+
+• 1
+5 ·
+
+
+3
+−4
+0
+4
+3
+0
+0
+0
+5
+
+
+6.3.2
+Geometrische Eigenschaften
+Die Spalten-Vektoren einer orthogonalen Matrix haben bemerkenswerte geometrische Eigen-
+schaften.
+Satz 6.7
+Orthonormalität der Spalten-Vektoren
+Seien n ∈N+ und A ∈O(n) mit Spaltenvektoren a1, . . . , an ∈Rn, d.h.
+A =
+
+a1
+a2
+. . .
+an
+
+.
+(6.61)
+Dann gilt
+⟨ai , aj ⟩= δij =
+(
+1
+i = j
+0
+i ̸= j.
+(6.62)
+Beweis: Weil A orthogonal ist, gilt
+1 = A−1 · A = AT · A =
+
+
+aT
+1
+aT
+2
+...
+aT
+n
+
+
+·
+
+a1
+a2
+. . .
+an
+
+=
+
+
+aT
+1 · a1
+aT
+1 · a2
+. . .
+aT
+1 · an
+aT
+2 · a1
+aT
+2 · a2
+. . .
+aT
+2 · an
+...
+...
+...
+...
+aT
+n · a1
+aT
+n · a2
+. . .
+aT
+n · an
+
+
+II-32

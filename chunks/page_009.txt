@@ -1,0 +1,55 @@
+Kapitel 1
+Integrale in Anwendungen
+1.1
+Einfache Berechnung von Integralen
+1.1.1
+Lineare Modifikation
+Wir betrachten den folgenden Satz.
+Satz 1.1
+Integration durch lineare Modifikation
+Seien f : R →R eine integrierbare Funktion mit Stammfunktion F : R →R und m, q, x0, xE ∈R
+mit m ̸= 0 und x0 < xE, dann gilt folgendes.
+(a)
+Z
+f(m · x + q) dx = 1
+m · F(m · x + q) + c
+(b)
+Z xE
+x0
+f(m · x + q) dx = 1
+m ·
+
+F(m · xE + q) −F(m · x0 + q)
+
+Beweis: Übung.
+Beispiele:
+• Wir betrachten ein unbestimmtes Elementarintegral und eine lineare Modifikation.
+elementar:
+F(x) =
+Z
+cos(x) dx = sin(x) + c
+linear modifiziert:
+F(x) =
+Z
+cos(2x + 3) dx = 1
+2 · sin(2x + 3) + c
+(1.1)
+• Wir betrachten das unbestimmte Integral
+F(x) =
+Z
+(7x −2)3 dx = 1
+7 · 1
+4 · (7x −2)4 + c = 1
+28 · (7x −2)4 + c.
+(1.2)
+• Wir betrachten das unbestimmte Integral
+F(x) =
+Z
+32x+9 dx = 1
+2 ·
+1
+ln(3) · 32x+9 + c =
+1
+2 ln(3) · 32x+9 + c.
+(1.3)
+I-3

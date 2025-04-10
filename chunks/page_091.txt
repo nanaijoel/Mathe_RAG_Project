@@ -1,0 +1,53 @@
+Bemerkungen:
+i) Für z = 0 exisitiert in beiden Varianten kein eindeutiges Argument. Meistens wählt man
+arg(0) = 0.
+ii) Für fast alle Anwendungen kann sowohl die Basler-Variante als auch die Zürcher-Variante
+verwendet werden.
+iii) Die Formeln zur Berechnung von arg(z) aus Real- und Imaginärteil sind bei der Zürcher-
+Variante etwas einfacher.
+iv) Beispiel-Codes zur Berechnung des Argumentes mit gängiger Software.
+MATLAB/Octave
+phi=angle(z)
+Mathematica/WolframAlpha
+phi=Arg[z]
+Python/Numpy
+import numpy as np;
+phi=np.angle(z)
+Python/Sympy
+import sympy as sp;
+phi=sp.arg(z)
+Wir betrachten den folgenden Satz.
+Satz 5.3
+Trigonometrische Form
+Seien x, y ∈R, r ∈R+ und φ ∈[0, 2π[ oder φ ∈]−π, π] sowie
+cis(φ) := cos(φ) + i · sin(φ),
+(5.17)
+dann gibt es ein eindeutiges z ∈C \ {0} mit
+z = x + y · i = r · cis(φ).
+(5.18)
+Ferner gelten die folgenden Umrechnungsformeln.
+(a)
+x = r · cos(φ) ∧y = r · sin(φ)
+(b)
+r = |z| =
+p
+x2 + y2 ∧φ = arg(z)
+Beweis: Die Aussage folgt sofort durch Anwenden der Trigonometrie in der Gauss-Ebene.
+Bemerkungen:
+i) Jede komplexe Zahl z ∈C lässt sich auf zwei Arten darstellen, nämlich
+z =
+x + y · i
+| {z }
+arithmetische Form
+=
+r · cis(φ)
+|
+{z
+}
+trigonometrische Form
+.
+(5.19)
+ii) Man bezeichnet die Schreibweise z = r · cis(φ) nur dann als trigonometrische Form, wenn
+gilt r = |z| ≥0. Der Winkel φ ∈R darf jedoch beliebig gewählt werden, d.h. φ muss
+nicht unbedingt das Argument gemäss einer der beiden Varianten sein.
+II-7

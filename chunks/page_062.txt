@@ -1,0 +1,32 @@
+Wir betrachten den folgenden Satz.
+Satz 2.25
+Eigenschaften des Gradienten in 2D
+Seien f : R2 →R differentierbar, ˆe ∈R2 ein Einheitsvektor und α = ∡(∇f; ˆe), dann gilt
+folgendes.
+(a) ∇ˆef ∈
+
+−|∇f |, +|∇f |
+
+(b) α = 0 ⇔ˆe ∥+∇f ⇔∇ˆef = +|∇f | maximal
+(c) α = π ⇔ˆe ∥−∇f ⇔∇ˆef = −|∇f | minimal
+(d) α = π
+2 ⇔ˆe ⊥∇f ⇔∇ˆef = 0
+(e) ∇f = 0 ⇔Tangentialebene an den Graphen von f verläuft horizontal
+Beweis: Für die Richtungsableitung von f in Richtung ˆe erhalten wir
+∇ˆef = ⟨ˆe, ∇f ⟩= |ˆe| · |∇f | · cos(α) = 1 · |∇f | · cos(α) = cos(α) · |∇f |.
+(2.199)
+Daraus folgen unmittelbar alle Aussagen und wir haben den Satz bewiesen.
+Bemerkungen:
+i) Der Gradient ∇f zeigt an jedem Punkt der x-y-Ebene gerade in die Richtung, in welcher
+die Steigung des Graphen von f maximal ist.
+ii) Die Länge |∇f | des Gradienten ist an jedem Punkt der x-y-Ebene gerade die maximale
+Steigung des Graphen von f.
+iii) Der Gradient steht an jedem Punkt der x-y-Ebene senkrecht auf der Level-Linie von f
+durch diesen Punkt.
+iv) Dort wo der Gradient verschwindet verläuft die Tangentialebene an den Graphen von f
+horizontal. Entsprechend hat f dort einen Hoch-Punkt, Tief-Punkt oder Sattel-Punkt.
+v) Definition und Eigenschaften sowohl des Gradienten als auch der Richtungsableitung gel-
+ten ganz analog auch in nD.
+Zeichnet man den Gradienten und die Level-Linien von f in der x-y-Ebene ein, dann ergibt
+sich ein Bild wie im folgenden Beispiel.
+I-56

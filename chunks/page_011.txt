@@ -1,0 +1,31 @@
+1.2
+Archimedes-Cauchy-Riemann-Approximationsprozess
+1.2.1
+Einleitung
+Einleitende Bemerkungen:
+i) Die Abkürzung ACR-Prozess steht für Archimedes-Cauchy-Riemann-Approximations-
+prozess.
+ii) Sinn und Zweck eines ACR-Prozess ist nicht die Berechnung von Integralen sondern das
+Auffinden von Integralen in der Praxis. Das Konzept ist im folgenden Schema dargestellt.
+iii) Aus den historischen Wurzeln des ACR-Prozesses ergibt sich auch die Erklärung für die
+Schreibweise mit dem “Integral-Haken”.
+1.2.2
+Historische Methode zur Berechnung von Integralen
+Wir betrachten den Graphen einer stetigen Funktion f : R →R entlang eines reellen Intervalls
+[x0, xE]. Die Situation ist im folgenden x-y-Diagramm dargestellt.
+Schon bevor die Newton-Leibniz-Formel bekannt war, gab es Methoden zur näherungsweise
+Berechnung der Fläche A entlang des reellen Intervalls [x0, xE] zwischen der x-Achse und dem
+Graphen von f. Dabei wurde typischerweise nach den folgenden Schritten vorgegangen.
+S1
+Man wählt ein N ∈N+ und definiert sich die Werte
+δx := xE −x0
+N
+(1.4)
+xk := x0 + k · δx
+für k ∈{1, . . . , N}.
+(1.5)
+S2
+Man berechnet für k ∈{1, . . . , N} die Flächeninhalte der Rechtecke gemäss
+δAk := f(xk) · δx.
+(1.6)
+I-5

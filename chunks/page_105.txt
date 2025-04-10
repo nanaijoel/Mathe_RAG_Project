@@ -1,0 +1,95 @@
+6.1.3.3
+Nullmatrix
+Eine reelle Matrix, deren Komponenten alle verschwinden, heisst Nullmatrix.
+Definition 6.9
+Nullmatrix
+Seien m, n ∈N+. Die Matrix 0 ∈M(m, n, R) mit
+0 =
+
+
+0
+0
+. . .
+0
+0
+0
+. . .
+0
+...
+...
+...
+...
+0
+0
+. . .
+0
+
+
+(6.17)
+heisst Nullmatrix.
+Bemerkungen:
+i) Alle Nullmatrizen werden unabhängig von ihren Dimensionen identifiziert und mit 0
+bezeichnet. Es gilt also
+0 =
+
+0
+
+=
+
+0
+0
+
+=
+ 0
+0
+
+=
+ 0
+0
+0
+0
+
+=
+ 0
+0
+0
+0
+0
+0
+
+=
+
+
+0
+0
+0
+0
+0
+0
+
+= . . . .
+(6.18)
+ii) Die Nullmatrix hat die gleichen algebraischen Eigenschaften wie die Zahl Null. Für jede
+Matrix A gilt
+A + 0 = A
+und
+0 · A = 0.
+(6.19)
+iii) Die quadratischen Nullmatrizen sind die einzigen Matrizen die sowohl symmetrisch als
+auch schiefsymmetrisch sind.
+iv) Beispiel-Codes zum Erzeugen von Nullmatrizen mit gängiger Software.
+MATLAB/Octave
+M=zeros(3)
+M=zeros(2,3)
+Mathematica/WolframAlpha
+M=ConstantArray[0,{3,3}]
+M=ConstantArray[0,{2,3}]
+Python/Numpy
+import numpy as np;
+M=np.zeros((3,3))
+M=np.zeros((2,3))
+Python/Sympy
+import sympy as sp;
+M=sp.zeros(3)
+M=sp.zeros(2,3)
+II-21

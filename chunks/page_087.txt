@@ -1,0 +1,32 @@
+Kapitel 5
+Komplexe Zahlen
+5.1
+Grundlagen
+5.1.1
+Einleitung
+Bekanntlich gibt es kein reelles x ∈R mit x2 < 0. Das bedeutet, für a < 0 hat die Gleichung
+x2 = a
+(5.1)
+keine Lösungen. Die Idee ist nun, eine noch grössere Zahlenmenge zu konstruieren, so dass auch
+alle negative reellen Zahlen als Quadrate geschrieben werden können.
+5.1.2
+Konstruktion
+Wir betrachten folgende Definition.
+Definition 5.1
+Komplexe Zahlen
+Die komplexen Zahlen C sind die kleinste Menge, welche die folgenden Eigenschaften erfüllt.
+A1
+R ⊆C.
+A2
+(C; +; ·) bildet einen Zahlenkörper.
+A3
+Es gibt ein i ∈C mit i2 = −1.
+Bemerkungen:
+i) Die Zahl i heisst imaginäre Einheit.
+ii) Weil in der Elektrotechnik i schon die elektrische Stromstärke bezeichnet, wird in der
+Literatur oft auch ein j verwendet.
+iii) Alle Elemente von C lassen sich durch reelle Zahlen und i beschreiben.
+iv) Man kann zeigen, dass C der grösstmögliche Zahlenkörper ist.
+v) Man kann zeigen, dass C algebraisch abgeschlossen ist und somit kein Bedarf für eine noch
+grössere Zahlenmenge besteht.
+II-3

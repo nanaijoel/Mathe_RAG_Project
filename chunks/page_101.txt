@@ -1,0 +1,125 @@
+Beispiele:
+•
+ 2
+−1
+3
+7
+5
+−4
+T
+=
+
+
+2
+7
+−1
+5
+3
+−4
+
+
+•
+ 2
+−1
+7
+5
+T
+=
+
+2
+7
+−1
+5
+
+•
+
+2
+−1
+T =
+
+2
+−1
+
+6.1.2.4
+Matrix-Multiplikation
+Zwei reelle Matrizen mit passenden Dimensionen lassen sich multiplizieren.
+Definition 6.5
+Matrix-Produkt
+Seien l, m, n ∈N+, A ∈M(l, m, R) und B ∈M(m, n, R), dann ist das Matrix-Produkt
+C = A · B
+definiert durch
+Ci
+j :=
+m
+X
+s=1
+Ai
+s · Bs
+j.
+(6.11)
+Bemerkungen:
+i) Das Matrix-Produkt A · B ist also genau dann definiert, wenn A so viele Spalten wie B
+Zeilen hat.
+ii) Für A ∈M(l, m, R) und B ∈M(m, n, R) gilt A · B ∈M(l, n, R).
+iii) Die Komponenten des Matrix-Produkts A · B sind gerade die Kontraktionen (“Skalar-
+Produkte”) der Zeilen von A mit den Spalten von B.
+iv) Die Berechnung eines Matrix-Produkts ist im allgemeinen recht aufwändig.
+v) Beispiel-Codes zur Berechnung von Matrix-Produkten mit gängiger Software.
+MATLAB/Octave
+M=A*B
+Mathematica/WolframAlpha
+M=A.B
+Python/Numpy
+M=A@B
+Python/Sympy
+M=A*B
+Beispiele:
+•
+ 1
+2
+3
+4
+
+·
+ 5
+6
+7
+8
+
+=
+ 1 · 5 + 2 · 7
+1 · 6 + 2 · 8
+3 · 5 + 4 · 7
+3 · 6 + 4 · 8
+
+=
+ 19
+22
+43
+50
+
+•
+ 5
+6
+7
+8
+
+·
+ 1
+2
+3
+4
+
+=
+ 5 · 1 + 6 · 3
+5 · 2 + 6 · 4
+7 · 1 + 8 · 3
+7 · 2 + 8 · 4
+
+=
+ 23
+34
+31
+46
+
+II-17

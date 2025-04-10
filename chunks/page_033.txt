@@ -1,0 +1,39 @@
+Beweis: Um das Volumen zwischen dem Reckteck G und dem Graphen von f zu berechnen
+verwenden wir einen Archimedes-Cauchy-Riemann-Approximationsprozess. Dabei gehen
+wir nach folgenden Schritten vor.
+S1
+Lokal: Wir betrachten einen kleinen Streifen des Rechtecks G mit Breite δx > 0, wie im
+folgenden x-y-z-Diagramm dargestellt.
+Die Querschnittsfläche AQ(x) können wir berechnen durch das bestimmte Integral
+AQ(x) =
+Z yE
+y0
+f(x; y) dy.
+(2.77)
+Das Volumen zwischen dem kleinen Streifen und dem Graphen von f ist
+δI ≈AQ(x) · δx.
+(2.78)
+S2
+Global: Durch Integration über x können wir das gesamte Volumen zwischen dem Rechteck
+G und dem Graphen von f berechnen. Wir erhalten
+I =
+Z xE
+x0
+AQ(x) dx =
+Z xE
+x0
+Z yE
+y0
+f(x; y) dy dx.
+(2.79)
+Durch Vertauschen der Rollen von x und y erhalten wir auf analoge Weise die zweite Version.
+Damit haben wir den Satz bewiesen.
+Bemerkungen:
+i) Durch den Fubini-Satz kann ein Integral über ein Gebiet in 2D auf die Berechnung von
+2 verschachtelten Integralen in 1D zurückgeführt werden und umgekehrt.
+ii) Bei der Anwendung des Fubini-Satzes werden die Zweifach-Integrale in der Reihenfolge
+von innen nach aussen berechnet.
+iii) Bei der Integration über ein Rechteck kann die Integrationsreihenfolge vertauscht werden.
+iv) Der Fubini-Satz ist ein allgemein gültiges Prinzip, dessen Aussage sowohl auf allgemeinere
+Gebiete als auch auf Gebiete in nD erweitert werden kann.
+I-27

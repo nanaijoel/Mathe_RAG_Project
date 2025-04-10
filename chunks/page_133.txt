@@ -1,0 +1,63 @@
+Wir betrachten die folgende Definition.
+Definition 6.23
+Mass
+Seien m, n ∈N+ und v1, . . . , vm ∈Rn mit Gram-Matrix G. Das Mass der Vektoren ist
+µ(v1; . . . ; vm) :=
+p
+det(G) .
+(6.140)
+Bemerkungen:
+i) Wegen det(G) ≥0 kann die Wurzel immer in R gezogen werden.
+ii) Das Mass ist die Verallgemeinerung der Begriffe Länge, Fläche und Volumen auf beliebige
+Dimensionen. Insbesondere gilt folgendes.
+µ(v) =
+p
+⟨v, v⟩= |v| ≡Länge von v
+(6.141)
+µ(v1; v2) ≡Fläche des von v1 und v2 aufgespannten Parallelogramms
+(6.142)
+µ(v1; v2; v3) ≡Volumen des von v1, v2 und v3 aufgespannten Spats
+(6.143)
+iii) Für die Standard-Einheitsvektoren gilt
+µ(ˆe1; . . . ; ˆen) =
+p
+det(1) =
+√
+1 = 1.
+(6.144)
+iv) Für m > n ist die Gram-Matrix G in jedem Fall singulär und es folgt
+µ(v1; . . . ; vm) = 0.
+(6.145)
+Falls die Anzahl Vektoren gerade der Dimension gleicht, dann lässt sich die Berechnung des
+Masses vereinfachen.
+Satz 6.20
+Mass-Formel in voller Dimension
+Seien n ∈N+ und v1, . . . , vn ∈Rn gerade die Spalten der Matrix
+A =
+
+v1
+v2
+. . .
+vn
+
+∈M(n, n, R).
+(6.146)
+Dann gilt
+µ(v1; . . . ; vn) := | det(A)|.
+(6.147)
+Beweis: Weil A eine quadratische Matrix ist, folgt
+µ(v1; . . . ; vn) =
+p
+det(G) =
+p
+det(AT · A) =
+p
+det(AT) · det(A) =
+p
+det(A) · det(A)
+=
+q
+det2(A) = | det(A)|.
+(6.148)
+Damit haben wir den Satz bewiesen.
+II-49

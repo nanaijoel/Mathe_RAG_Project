@@ -1,0 +1,50 @@
+3. Level-Mengen-Plot: Die Level-Mengen zu verschiedenen Levels werden gezeichnet.
+Anwendungen: Höhenlinien, Äquipotentiallinien, Äquipotentialflächen, Atomorbitale.
+Bemerkungen:
+i) Welche Visualisierung am besten geeignet ist, hängt sowohl von der Dimension als auch
+vom Verlauf der Funktion ab.
+ii) Nicht jede Fläche in 3D ist der Graph einer Funktion f : R2 →R. Gegenbeispiel: Alle
+geschlossenen Flächen, wie z.B. eine Sphäre.
+iii) Jede Ebene in 3D kann als Graph einer Funktion f : R2 →R beschrieben werden. Dies
+geschieht mit Hilfe einer Normalen-Gleichung.
+2.1.2
+Vektorfelder
+2.1.2.1
+Definition
+Wir betrachten die folgende Definition.
+Definition 2.3
+Vektorwertige Funktion in mehreren reellen Variablen
+Seien n ∈N+ \ {1}, A, B ⊆Rn. Eine Funktion auf A der Form v : A →B heisst vektorwertige
+Funktion in n reellen Variablen.
+Bemerkungen:
+i) Die reellen Variablen werden nach dem Funktionsnamen v in runden Klammern aufge-
+zählt, jeweils durch ein Semicolon getrennt.
+n = 2 :
+v(x; y) =
+ vx(x; y)
+vy(x; y)
+
+(2.18)
+n = 3 :
+v(x; y; z) =
+
+
+vx(x; y; z)
+vy(x; y; z)
+vz(x; y; z)
+
+
+(2.19)
+allg:
+v(x1; x2; . . . ; xn) =
+
+
+v1(x1; x2; . . . ; xn)
+v2(x1; x2; . . . ; xn)
+...
+vn(x1; x2; . . . ; xn)
+
+
+(2.20)
+ii) Jede Komponente eines Vektorfeldes ist eine reellwertige Funktion in n reellen Variablen.
+I-15

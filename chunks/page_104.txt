@@ -1,0 +1,53 @@
+6.1.3.2
+Symmetrische & schiefsymmetrische Matrix
+Spezielle Bedeutung haben quadratische Matrizen, die bei Transposition in sich selbst oder in
+ihr Negatives übergehen.
+Definition 6.8
+Symmetrische & schiefsymmetrische Matrix
+Seien n ∈N+ und A ∈M(n, n, R).
+(a) A ist symmetrisch, genau falls AT = A.
+(b) A ist schiefsymmetrisch, genau falls AT = −A.
+Bemerkungen:
+i) Die Komponenten auf der Hauptdiagonalen einer schiefsymmetrischen Matrix müssen
+zwingend verschwinden.
+ii) Eine symmetrische Matrix A ∈M(n, n, R) hat die Anzahl unabhängiger Komponenten von
+n+ = n · (n + 1)
+2
+.
+(6.15)
+iii) Eine schiefsymmetrische Matrix A ∈M(n, n, R) hat die Anzahl unabhängiger Komponen-
+ten von
+n−= n · (n −1)
+2
+.
+(6.16)
+Beispiele:
+•
+ 1
+2
+2
+3
+
+ist symmetrisch
+•
+ 0
+−2
+2
+0
+
+ist schiefsymmetrisch
+•
+
+
+0
+−1
+2
+1
+0
+−3
+−2
+3
+0
+
+ist schiefsymmetrisch
+II-20

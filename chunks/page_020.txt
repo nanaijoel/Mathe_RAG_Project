@@ -1,0 +1,12 @@
+• Die Level-Mengen der Temperatur werden in der Thermographie durch eine Farbskala dar-
+gestellt.
+2.1.1.3
+Visualisierung
+Es gibt mehrere Möglichkeiten, um eine reellwertige Funktion in mehreren reellen Variablen zu
+visualisieren.
+1. Funktionsgraph: Die Funktionswerte werden in eine weitere Dimension aufgetragen. Wir
+zeigen eine Beispielskizze für eine Funktion f : R2 →R.
+Anwendungen: Flächen-Plot.
+2. Farb-Plot: Die Funktionswerte werden durch unterschiedliche Farben gekennzeichnet.
+Anwendungen: Thematische Landkarten, Thermographie.
+I-14

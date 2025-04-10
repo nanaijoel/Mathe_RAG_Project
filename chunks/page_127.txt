@@ -1,0 +1,103 @@
+iv) In jedem Fall gilt σ(p) ∈{−1, +1}. Es werden folgende Bezeichnungen verwendet:
+σ(p) = −1
+⇔
+p ist eine ungerade Permutation
+σ(p) = +1
+⇔
+p ist eine gerade Permutation.
+(6.107)
+Mit diesen Vorbreitungen sind wir nun bereit, die Determinante einer beliebigen quadratischen
+Matrix mit Hilfe der Leibniz-Formel zu definieren.
+Definition 6.21
+Determinante
+Seien n ∈N+ und A ∈M(n, n, R). Die Determinante der Matrix A ist die reelle Zahl
+det(A) :=
+X
+p∈Sn
+σ(p) · Ap(1)
+1 · . . . · Ap(n)
+n.
+(6.108)
+Bemerkungen:
+i) Gemäss Leibniz-Formel (6.108) wird die Determinante einer quadratischen Matrix A ∈
+M(n, n, R) durch folgende Schritte gebildet.
+S1
+Man sucht sich alle Möglichkeiten, um n Komponenten aus A auszuwählen, so dass
+aus jeder Zeile und jeder Spalte genau eine Komponente vertreten ist.
+S2
+Man berechnet für jede Möglichkeit aus Schritt S1 das Produkt der gefundenen Kom-
+ponenten.
+S3
+Man multipliziert jedes dieser Produkte aus Schritt S2 mit dem Vorzeichen der Per-
+mutation zwischen Zeilen- und Spaltenindizes.
+S4
+Man addiert alle Produkte mit den entsprechenden Vorzeichen.
+ii) Für n = 2 gibt es nur die folgenden n! = 2! = 1 · 2 = 2 Permutationen.
+k
+pk(1)
+pk(2)
+ρ(pk)
+σ(pk)
+1
+1
+2
+0
++1
+2
+2
+1
+1
+−1
+(6.109)
+Die Determinante einer 2 × 2-Matrix ist folglich
+det(A) = A1
+1 · A2
+2 −A2
+1 · A1
+2.
+(6.110)
+iii) Für n = 3 gibt es die folgenden n! = 3! = 1 · 2 · 3 = 6 Permutationen.
+k
+pk(1)
+pk(2)
+pk(3)
+ρ(pk)
+σ(pk)
+1
+1
+2
+3
+0
++1
+2
+2
+3
+1
+2
++1
+3
+3
+1
+2
+2
++1
+4
+3
+2
+1
+3
+−1
+5
+1
+3
+2
+1
+−1
+6
+2
+1
+3
+1
+−1
+(6.111)
+II-43

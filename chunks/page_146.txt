@@ -1,0 +1,48 @@
+7.2
+Lineare Abbildungen
+7.2.1
+Definition
+Der Begriff lineare Abbildung lässt sich zwischen allgemeinen Vektorräumen definieren.
+Definition 7.7
+Lineare Abbildung
+Seien (V, K, +, ·) und (W, K, +, ·) zwei Vektorräume über dem gleichen Zahlenkörper K. Eine
+Abbildung der Form
+a : V →W
+(7.34)
+heisst lineare Abbildung, falls für alle u, v ∈V und x, y ∈K gilt
+a(x · u + y · v) = x · a(u) + y · a(v).
+(7.35)
+Bemerkungen:
+i) Für diese Definition ist es sehr wichtig, dass die Vektorräume V und W über dem gleichen
+Zahlenkörper K definiert sind.
+ii) Diese Definition entspricht der Definition 6.14 aus Abschnitt 6.2.1.
+iii) Eine lineare Abbildung erkennt man daran, dass sie die Struktur einer Linearkombination
+respektiert.
+iv) Für alle linearen Abbildungen gilt offensichtlich
+a(0) = a(0 · 0) = 0 · a(0) = 0.
+(7.36)
+Beispiele:
+• Die bereits bekannten geometrisch definierten linearen Abbildungen in Rn wie Spiegelungen,
+Drehungen, Projektionen etc...
+• Die Ableitung d : Pn(R) →Pn(R) oder d : Pn(R) →Pn−1(R).
+• Die Orthogonal-Projektion in L2(R).
+7.2.2
+Matrix-Darstellung
+Betrachtet man eine lineare Abbildung zwischen zwei endlich dimensionalen Vektorräumen und
+wählt in beiden jeweils eine Basis, dann kann man die lineare Abbildung durch eine Abbildungs-
+matrix darstellen.
+Definition 7.8
+Abbildungsmatrix
+Seien (V, K, +, ·) und (W, K, +, ·) zwei Vektorräume über dem gleichen Zahlenkörper K mit den
+endlichen Dimensionen dim(V ) = n ∈N+ bzw. dim(W) = m ∈N+ und Basen {e1, . . . , en} ⊆
+V bzw. {E1, . . . , Em} ⊆W sowie a : V →W eine lineare Abbildung. Die Abbildungsmatrix von
+a bezüglich der gewählten Basen ist die Matrix A ∈M(m, n, K) mit den Komponenten Aij ∈K,
+so dass für alle j ∈{1, . . . , n} gilt
+a(ej) =
+m
+X
+i=1
+Ai
+j · Ei.
+(7.37)
+II-62

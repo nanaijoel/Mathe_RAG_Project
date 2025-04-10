@@ -1,0 +1,110 @@
+3.2
+Uneigentliche Integrale
+3.2.1
+Integration über unendliche Intervalle
+3.2.1.1
+Integration über ein einseitig unendliches Intervall
+Eine Fläche kann durch eine unendlich lange Randkurve begrenzt sein und trotzdem einen
+endlichen Flächeninhalt haben. Wir betrachten den Graphen einer Funktion f : R →R, welche
+sich für x →∞asymptotisch der x-Achse annähert. Eine solche Situation ist im folgenden
+x-y-Diagramm dargestellt.
+x0
+x
+0
+y
+y = f(x)
+I
+Wir betrachten die folgende Definition.
+Definition 3.1
+Uneigentliches Integral mit einer unendlichen Grenze.
+Seien x0, xE ∈R und f : R →R eine integrierbare Funktion. Die uneigentlichen Integrale von f
+Richtung ±∞sind
+(a)
+Z ∞
+x0
+f(x) dx := lim
+s→∞
+Z s
+x0
+f(x) dx,
+(b)
+Z xE
+−∞
+f(x) dx := lim
+s→∞
+Z xE
+−s
+f(x) dx,
+falls die betreffenden Grenzwerte jeweils konvergieren.
+Beispiele:
+• Wir betrachten das uneigentliche Integral
+I =
+Z ∞
+2
+1
+x2 dx = lim
+s→∞
+Z s
+2
+1
+x2 dx = lim
+s→∞
+
+−1
+x
+
+s
+2
+= lim
+s→∞
+
+−1
+s + 1
+2
+
+= 0 + 1
+2 = 1
+2 .
+(3.30)
+• Wir betrachten das uneigentliche Integral
+I =
+Z ∞
+2
+1
+x dx = lim
+s→∞
+Z s
+2
+1
+x dx = lim
+s→∞ln
+s
+2
+
+= ∞.
+(3.31)
+Dieses uneigentliche Integral ist divergent und existiert daher nicht.
+• Wir betrachten das uneigentliche Integral
+I =
+Z ∞
+ln(2)
+e−x dx = lim
+s→∞
+Z s
+ln(2)
+e−x dx = lim
+s→∞
+h
+−e−x i
+s
+ln(2) = lim
+s→∞
+
+−e−s + e−ln(2)
+= 0 + e−ln(2)
+= e−ln(2) =
+1
+eln(2) = 1
+2 .
+(3.32)
+I-69
