@@ -7,7 +7,7 @@ import numpy as np
 from openai import OpenAI
 from dotenv import load_dotenv
 
-# ==== Setup ====
+# Setup
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EMBED_DIR = os.path.join(BASE_DIR, "embeddings")
@@ -21,7 +21,7 @@ GPT_MODEL = "gpt-4-turbo"
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 
-# ==== Keyword extrahieren (GPT-basiert) ====
+# Keyword extrahieren
 def get_main_keyword(text):
     try:
         response = client.chat.completions.create(
@@ -43,7 +43,7 @@ def get_main_keyword(text):
         keyword = re.sub(r"\W+", "_", keyword)  # alles außer \w wird _
         return keyword[:40]
     except Exception as e:
-        print(f"⚠️ GPT-Keyword-Erkennung fehlgeschlagen: {e}")
+        print(f"GPT-Keyword-Erkennung fehlgeschlagen: {e}")
         return "antwort"
 
 
@@ -69,19 +69,18 @@ def markdown_to_latex(text):
             latex_lines.append(r"\item " + line[2:])
             continue
 
-        # Zeilen mit mehreren Gleichungen (mehrere "=" oder "+")
+        # Zeilen mit mehreren Gleichungen (mehrere "=")
         if line.count("=") >= 1 or line.count("+") >= 3:
             if not in_align:
                 latex_lines.append(r"\begin{align*}")
                 in_align = True
 
-            # Aufteilen an mehreren Gleichungen (vorsichtig!)
+            # Aufteilen an mehreren Gleichungen
             segments = re.split(r"\s{2,}", line)  # Doppelte Leerzeichen trennen Schritte
             for segment in segments:
                 latex_lines.append(segment.strip() + r"\\")
             continue
 
-        # Normale Zeile
         if in_align:
             if r"\item" not in line:
                 latex_lines.append(r"\end{align*}")
@@ -102,13 +101,13 @@ def markdown_to_latex(text):
 
 
 
-# ==== Embedding erzeugen ====
+# Embedding erzeugen
 def get_embedding(text):
     response = client.embeddings.create(model=EMBED_MODEL, input=[text.replace("\n", " ")])
     return response.data[0].embedding
 
 
-# ==== GPT-Antwort ====
+# GPT-Antwort
 def ask_gpt(context, user_question):
     system_prompt = (
         "You are a helpful math tutor. "
@@ -127,7 +126,6 @@ def ask_gpt(context, user_question):
     return response.choices[0].message.content.strip()
 
 
-# ==== Main ====
 def main():
     frage = input("Frage eingeben: ").strip()
     if not frage:
@@ -135,7 +133,6 @@ def main():
         return
 
     keyword = get_main_keyword(frage)
-    print(f"Haupt-Schlüsselwort: {keyword}")
 
     question_vector = np.array(get_embedding(frage)).astype("float32")
     index = faiss.read_index(os.path.join(EMBED_DIR, "faiss.index"))
