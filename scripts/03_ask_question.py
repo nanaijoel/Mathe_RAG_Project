@@ -30,7 +30,7 @@ def get_main_keyword(text):
                 {"role": "system", "content": (
                     "You are an assistant that extracts the most relevant technical keyword "
                     "from a math-related user question. "
-                    "Return only a single lowercase keyword, suitable for a filename. "
+                    "Return only a single uppercase keyword, suitable for a filename. "
                     "Avoid generic words like 'bitte', 'frage', 'thema', etc. "
                     "Replace German umlauts and avoid spaces or special characters."
                 )},

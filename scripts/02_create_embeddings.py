@@ -3,7 +3,7 @@ import faiss
 import pickle
 import numpy as np
 from openai import OpenAI
-from uuid import uuid4
+# from uuid import uuid4
 
 # KONFIGURATION
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
