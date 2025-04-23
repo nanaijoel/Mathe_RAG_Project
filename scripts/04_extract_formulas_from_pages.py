@@ -53,6 +53,19 @@ def markdown_to_latex(text):
         line = line.strip()
         line = line.replace("&", r"\&")
 
+        # Markdown-Titel wie "1. **Faktorregel:**" erkennen
+        title_match = re.match(r"^\d+\.\s+\*\*(.*?)\*\*", line)
+        if title_match:
+            if in_align:
+                latex_lines.append(r"\end{align*}")
+                in_align = False
+            if in_itemize:
+                latex_lines.append(r"\end{itemize}")
+                in_itemize = False
+            latex_lines.append(r"\textbf{" + title_match.group(1).strip() + r"}\\")
+            continue
+
+        # Überschriften wie "# Abschnittstitel"
         if re.match(r"^#{1,6}\s", line):
             if in_align:
                 latex_lines.append(r"\end{align*}")
@@ -64,6 +77,7 @@ def markdown_to_latex(text):
             latex_lines.append(r"\textbf{" + content + r"}\\")
             continue
 
+        # Bullet Points
         if line.startswith("- "):
             if in_align:
                 latex_lines.append(r"\end{align*}")
@@ -74,6 +88,7 @@ def markdown_to_latex(text):
             latex_lines.append(r"\item " + line[2:])
             continue
 
+        # Zeilen mit Gleichungen oder math. Symbolen
         if line.count("=") >= 1 or line.count("+") >= 3 or any(char in line for char in ["\\", "∫", "Σ", "π", "\u03b1"]):
             if in_itemize:
                 latex_lines.append(r"\end{itemize}")
@@ -86,6 +101,7 @@ def markdown_to_latex(text):
                 latex_lines.append(segment.strip() + r"\\")
             continue
 
+        # Normale Textzeilen
         if in_align:
             latex_lines.append(r"\end{align*}")
             in_align = False
@@ -95,12 +111,14 @@ def markdown_to_latex(text):
 
         latex_lines.append(line)
 
+    # Offene Umgebungen am Ende schließen
     if in_align:
         latex_lines.append(r"\end{align*}")
     if in_itemize:
         latex_lines.append(r"\end{itemize}")
 
     return "\n".join(latex_lines)
+
 
 
 def ask_gpt(context, user_question):
@@ -133,9 +151,10 @@ def extract_page_range(frage: str):
 
 def main():
     fragen = [
-        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 1-10",
-        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 10-19",
-        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 20-29"
+        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 51-55",
+        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 56-60",
+        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 61-65",
+        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 66-70"
     ]
 
     with open(os.path.join(EMBED_DIR, "metadata.pkl"), "rb") as f:
