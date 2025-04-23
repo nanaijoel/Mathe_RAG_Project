@@ -20,7 +20,6 @@ GPT_MODEL = "gpt-4-turbo"
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-
 # Keyword extrahieren
 def get_main_keyword(text):
     try:
@@ -46,74 +45,21 @@ def get_main_keyword(text):
         print(f"GPT-Keyword-Erkennung fehlgeschlagen: {e}")
         return "antwort"
 
-
-def markdown_to_latex(text):
-    lines = text.splitlines()
-    latex_lines = []
-    in_align = False
-
-    for line in lines:
-        line = line.strip()
-
-        # Überschriften in fett
-        if re.match(r"^#{1,6}\s", line):
-            content = line.lstrip('#').strip()
-            latex_lines.append(r"\textbf{" + content + r"}\\")
-            continue
-
-        # Bullet Points
-        if line.startswith("- "):
-            if not in_align:
-                latex_lines.append(r"\begin{itemize}")
-                in_align = True
-            latex_lines.append(r"\item " + line[2:])
-            continue
-
-        # Zeilen mit mehreren Gleichungen (mehrere "=")
-        if line.count("=") >= 1 or line.count("+") >= 3:
-            if not in_align:
-                latex_lines.append(r"\begin{align*}")
-                in_align = True
-
-            # Aufteilen an mehreren Gleichungen
-            segments = re.split(r"\s{2,}", line)  # Doppelte Leerzeichen trennen Schritte
-            for segment in segments:
-                latex_lines.append(segment.strip() + r"\\")
-            continue
-
-        if in_align:
-            if r"\item" not in line:
-                latex_lines.append(r"\end{align*}")
-                in_align = False
-
-        latex_lines.append(line)
-
-    if in_align:
-        latex_lines.append(r"\end{align*}")
-
-    result = "\n".join(latex_lines)
-
-    # Falls \item verwendet wurde, in Umgebung einbetten
-    if r"\item" in result and r"\begin{itemize}" not in result:
-        result = r"\begin{itemize}" + "\n" + result + "\n" + r"\end{itemize}"
-
-    return result
-
-
-
 # Embedding erzeugen
 def get_embedding(text):
     response = client.embeddings.create(model=EMBED_MODEL, input=[text.replace("\n", " ")])
     return response.data[0].embedding
 
-
-# GPT-Antwort
+# GPT-Antwort mit LaTeX direkt erzeugen
 def ask_gpt(context, user_question):
     system_prompt = (
-        "You are a helpful math tutor. "
-        "Use the provided context to answer the question using correct LaTeX formatting. "
-        "Do not make up facts – only use the provided content."
+        "You are a LaTeX expert and math tutor. "
+        "Use the CONTEXT to answer the QUESTION. "
+        "Format all rules and formulas using proper LaTeX environments. "
+        "Use \\begin{itemize} ... \\item ... \\end{itemize} for rule lists, and \\begin{align*} for equations. "
+        "Ensure that each rule or equation appears on a separate line, wrapped if necessary using \\resizebox or small."
     )
+
     messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": f"Context:\n{context}\n\nQuestion:\n{user_question}"}
@@ -125,7 +71,6 @@ def ask_gpt(context, user_question):
     )
     return response.choices[0].message.content.strip()
 
-
 def main():
     frage = input("Frage eingeben: ").strip()
     if not frage:
@@ -133,8 +78,8 @@ def main():
         return
 
     keyword = get_main_keyword(frage)
-
     question_vector = np.array(get_embedding(frage)).astype("float32")
+
     index = faiss.read_index(os.path.join(EMBED_DIR, "faiss.index"))
     with open(os.path.join(EMBED_DIR, "metadata.pkl"), "rb") as f:
         metadata = pickle.load(f)
@@ -144,8 +89,7 @@ def main():
     context_chunks = [metadata["texts"][i] for i in indices[0]]
     context_text = "\n\n---\n\n".join(context_chunks)
 
-    antwort_roh = ask_gpt(context_text, frage)
-    antwort_latex = markdown_to_latex(antwort_roh)
+    antwort_latex = ask_gpt(context_text, frage)
 
     tex_path = os.path.join(OUTPUT_DIR, f"{keyword}.tex")
     pdf_path = os.path.join(OUTPUT_DIR, f"{keyword}.pdf")
@@ -154,7 +98,9 @@ def main():
         f.write(r"\documentclass{article}" + "\n")
         f.write(r"\usepackage[utf8]{inputenc}" + "\n")
         f.write(r"\usepackage{amsmath,amssymb,amsthm}" + "\n")
-        f.write(r"\usepackage[a4paper,margin=2.5cm]{geometry}" + "\n")
+        f.write(r"\usepackage{mathtools}" + "\n")
+        f.write(r"\usepackage{graphicx}" + "\n")
+        f.write(r"\usepackage[a4paper,margin=1.5cm]{geometry}" + "\n")
         f.write(r"\begin{document}" + "\n\n")
         f.write(r"\section*{" + keyword.replace("_", " ").title() + "}\n\n")
         f.write(antwort_latex + "\n\n")
@@ -168,7 +114,6 @@ def main():
             raise FileNotFoundError("PDF wurde nicht erzeugt.")
     except Exception as e:
         print(f"Fehler bei PDF-Erzeugung: {e}")
-
 
 if __name__ == "__main__":
     main()

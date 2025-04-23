@@ -1,5 +1,4 @@
 import os
-import pickle
 import re
 import subprocess
 from openai import OpenAI
@@ -8,7 +7,7 @@ from dotenv import load_dotenv
 # Setup
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-EMBED_DIR = os.path.join(BASE_DIR, "embeddings")
+CHUNK_DIR = os.path.join(BASE_DIR, "chunks")
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -16,7 +15,6 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GPT_MODEL = "gpt-4-turbo"
 
 client = OpenAI(api_key=OPENAI_API_KEY)
-
 
 def get_main_keyword(text):
     try:
@@ -42,66 +40,59 @@ def get_main_keyword(text):
         print(f"GPT-Keyword-Erkennung fehlgeschlagen: {e}")
         return "antwort"
 
-
 def markdown_to_latex(text):
     lines = text.splitlines()
     latex_lines = []
     in_align = False
     in_itemize = False
+    in_matrix = False
 
     for line in lines:
-        line = line.strip()
-        line = line.replace("&", r"\&")
+        raw_line = line.strip()
 
-        # Markdown-Titel wie "1. **Faktorregel:**" erkennen
-        title_match = re.match(r"^\d+\.\s+\*\*(.*?)\*\*", line)
-        if title_match:
+        if r"\begin{bmatrix}" in raw_line or r"\begin{matrix}" in raw_line:
+            in_matrix = True
+        if r"\end{bmatrix}" in raw_line or r"\end{matrix}" in raw_line:
+            in_matrix = False
+
+        if not in_matrix and not in_align:
+            raw_line = raw_line.replace("&", r"\&")
+
+        if re.match(r"^#{1,6}\s", raw_line):
             if in_align:
                 latex_lines.append(r"\end{align*}")
                 in_align = False
             if in_itemize:
                 latex_lines.append(r"\end{itemize}")
                 in_itemize = False
-            latex_lines.append(r"\textbf{" + title_match.group(1).strip() + r"}\\")
-            continue
-
-        # Überschriften wie "# Abschnittstitel"
-        if re.match(r"^#{1,6}\s", line):
-            if in_align:
-                latex_lines.append(r"\end{align*}")
-                in_align = False
-            if in_itemize:
-                latex_lines.append(r"\end{itemize}")
-                in_itemize = False
-            content = line.lstrip('#').strip()
+            content = raw_line.lstrip('#').strip()
             latex_lines.append(r"\textbf{" + content + r"}\\")
             continue
 
-        # Bullet Points
-        if line.startswith("- "):
+        if raw_line.startswith("- "):
             if in_align:
                 latex_lines.append(r"\end{align*}")
                 in_align = False
             if not in_itemize:
                 latex_lines.append(r"\begin{itemize}")
                 in_itemize = True
-            latex_lines.append(r"\item " + line[2:])
+            latex_lines.append(r"\item " + raw_line[2:])
             continue
 
-        # Zeilen mit Gleichungen oder math. Symbolen
-        if line.count("=") >= 1 or line.count("+") >= 3 or any(char in line for char in ["\\", "∫", "Σ", "π", "\u03b1"]):
+        if raw_line.count("=") >= 1 or raw_line.count("+") >= 3 or any(char in raw_line for char in ["\\", "∫", "Σ", "π", "α"]):
             if in_itemize:
                 latex_lines.append(r"\end{itemize}")
                 in_itemize = False
             if not in_align:
                 latex_lines.append(r"\begin{align*}")
                 in_align = True
-            segments = re.split(r"\s{2,}", line)
+            segments = re.split(r"\s{2,}", raw_line)
             for segment in segments:
-                latex_lines.append(segment.strip() + r"\\")
+                cleaned = segment.strip()
+                if cleaned:
+                    latex_lines.append(cleaned + r" \\\\[1ex]")
             continue
 
-        # Normale Textzeilen
         if in_align:
             latex_lines.append(r"\end{align*}")
             in_align = False
@@ -109,9 +100,8 @@ def markdown_to_latex(text):
             latex_lines.append(r"\end{itemize}")
             in_itemize = False
 
-        latex_lines.append(line)
+        latex_lines.append(raw_line)
 
-    # Offene Umgebungen am Ende schließen
     if in_align:
         latex_lines.append(r"\end{align*}")
     if in_itemize:
@@ -119,14 +109,15 @@ def markdown_to_latex(text):
 
     return "\n".join(latex_lines)
 
-
-
 def ask_gpt(context, user_question):
     system_prompt = (
-        "You are a helpful math assistant. "
-        "You will extract and list all mathematical formulas from the provided context. "
-        "List them in LaTeX, and include any associated titles or explanations if available. "
-        "Focus on completeness – do not skip any recognizable mathematical expressions."
+        "Du bist ein mathematischer Assistent. "
+        "Extrahiere **alle mathematischen Formeln und vollständigen Rechenschritte** aus dem gegebenen Text. "
+        "Gib alle Schritte an, auch Zwischenrechnungen, Grenzwerte, Umformungen und alle Integrale. "
+        "Nutze `align*`-Umgebungen, um mehrzeilige Rechnungen darzustellen. "
+        "Kennzeichne jeden Titel von den Formeln mit Fettschrift (\\textbf{...}), sofern vorhanden. "
+        "Gib **nur die exakten Formeln und Herleitungen aus dem Kontext**. "
+        "Wenn du eine Gleichung schreibst, nicht nur Anfang und Endresultat, sondern die ganze Rechnung des Skripts. "
     )
     messages = [
         {"role": "system", "content": system_prompt},
@@ -139,42 +130,45 @@ def ask_gpt(context, user_question):
     )
     return response.choices[0].message.content.strip()
 
-
 def extract_page_range(frage: str):
-    match = re.search(r"Seite[n]*\s*(\d+)\s*[-–]\s*(\d+)", frage, re.IGNORECASE)
+    match = re.search(r"Seite[n]*\s*(\d+)\s*[-\u2013\s]+(\d+)", frage, re.IGNORECASE)
     if match:
         start, end = int(match.group(1)), int(match.group(2))
         return range(start, end + 1)
     else:
         return None
 
-
 def main():
     fragen = [
-        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 51-55",
-        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 56-60",
-        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 61-65",
-        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 66-70"
+        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 77-78"
     ]
 
-    with open(os.path.join(EMBED_DIR, "metadata.pkl"), "rb") as f:
-        metadata = pickle.load(f)
-
-    texts = metadata["texts"]
-    pages = metadata.get("pages", list(range(1, len(texts) + 1)))
+    texts = []
+    pages = []
+    for filename in sorted(os.listdir(CHUNK_DIR)):
+        match = re.match(r"page_(\d{3})\.txt", filename)
+        if match:
+            page_num = int(match.group(1))
+            path = os.path.join(CHUNK_DIR, filename)
+            with open(path, "r", encoding="utf-8") as f:
+                content = f.read()
+                if content.strip():
+                    texts.append(content)
+                    pages.append(page_num)
 
     for frage in fragen:
         print(f"\nFrage: {frage}")
         keyword = get_main_keyword(frage)
         seitenbereich = extract_page_range(frage)
-        seiten_suffix = f"_s{seitenbereich.start}_s{seitenbereich.stop - 1}" if seitenbereich else ""
-        filename = f"{keyword}{seiten_suffix}"
+        print(f"Erkannter Seitenbereich: {seitenbereich}")
 
         if not seitenbereich:
             print("Konnte Seitenbereich nicht erkennen.")
             continue
 
         chunks = [text for text, page in zip(texts, pages) if page in seitenbereich]
+        print(f"Chunks für Seitenbereich gefunden: {len(chunks)}")
+
         if not chunks:
             print("Keine passenden Chunks im gewünschten Seitenbereich gefunden.")
             continue
@@ -182,6 +176,9 @@ def main():
         context_text = "\n\n---\n\n".join(chunks)
         antwort_roh = ask_gpt(context_text, frage)
         antwort_latex = markdown_to_latex(antwort_roh)
+
+        seiten_suffix = f"_s{seitenbereich.start}_s{seitenbereich.stop - 1}"
+        filename = f"{keyword}{seiten_suffix}"
 
         tex_path = os.path.join(OUTPUT_DIR, f"{filename}.tex")
         pdf_path = os.path.join(OUTPUT_DIR, f"{filename}.pdf")
@@ -191,8 +188,10 @@ def main():
             f.write(r"\usepackage[utf8]{inputenc}" + "\n")
             f.write(r"\usepackage{amsmath,amssymb,amsthm}" + "\n")
             f.write(r"\usepackage[a4paper,margin=2.5cm]{geometry}" + "\n")
+            f.write(r"\setlength{\mathindent}{0pt}" + "\n")
+            f.write(r"\sloppy" + "\n")
             f.write(r"\begin{document}" + "\n\n")
-            f.write(r"\section*{" + filename.replace("_", " ").title() + "}\n\n")
+            f.write(r"\section*{" + filename.replace("_", " ").title() + "}" + "\n\n")
             f.write(antwort_latex + "\n\n")
             f.write(r"\end{document}")
 
@@ -204,7 +203,6 @@ def main():
                 raise FileNotFoundError("PDF wurde nicht erzeugt.")
         except Exception as e:
             print(f"Fehler bei PDF-Erzeugung: {e}")
-
 
 if __name__ == "__main__":
     main()
