@@ -16,108 +16,12 @@ GPT_MODEL = "gpt-4-turbo"
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-def get_main_keyword(text):
-    try:
-        response = client.chat.completions.create(
-            model=GPT_MODEL,
-            messages=[
-                {"role": "system", "content": (
-                    "You are an assistant that extracts the most relevant technical keyword "
-                    "from a math-related user question. "
-                    "Return only a single uppercase keyword, suitable for a filename. "
-                    "Avoid generic words like 'bitte', 'frage', 'thema', etc. "
-                    "Replace German umlauts and avoid spaces or special characters."
-                )},
-                {"role": "user", "content": text}
-            ],
-            temperature=0.0
-        )
-        keyword = response.choices[0].message.content.strip().lower()
-        keyword = keyword.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
-        keyword = re.sub(r"\W+", "_", keyword)
-        return keyword[:40]
-    except Exception as e:
-        print(f"GPT-Keyword-Erkennung fehlgeschlagen: {e}")
-        return "antwort"
-
-def markdown_to_latex(text):
-    lines = text.splitlines()
-    latex_lines = []
-    in_align = False
-    in_itemize = False
-    in_matrix = False
-
-    for line in lines:
-        raw_line = line.strip()
-
-        if r"\begin{bmatrix}" in raw_line or r"\begin{matrix}" in raw_line:
-            in_matrix = True
-        if r"\end{bmatrix}" in raw_line or r"\end{matrix}" in raw_line:
-            in_matrix = False
-
-        if not in_matrix and not in_align:
-            raw_line = raw_line.replace("&", r"\&")
-
-        if re.match(r"^#{1,6}\s", raw_line):
-            if in_align:
-                latex_lines.append(r"\end{align*}")
-                in_align = False
-            if in_itemize:
-                latex_lines.append(r"\end{itemize}")
-                in_itemize = False
-            content = raw_line.lstrip('#').strip()
-            latex_lines.append(r"\textbf{" + content + r"}\\")
-            continue
-
-        if raw_line.startswith("- "):
-            if in_align:
-                latex_lines.append(r"\end{align*}")
-                in_align = False
-            if not in_itemize:
-                latex_lines.append(r"\begin{itemize}")
-                in_itemize = True
-            latex_lines.append(r"\item " + raw_line[2:])
-            continue
-
-        if raw_line.count("=") >= 1 or raw_line.count("+") >= 3 or any(char in raw_line for char in ["\\", "∫", "Σ", "π", "α"]):
-            if in_itemize:
-                latex_lines.append(r"\end{itemize}")
-                in_itemize = False
-            if not in_align:
-                latex_lines.append(r"\begin{align*}")
-                in_align = True
-            segments = re.split(r"\s{2,}", raw_line)
-            for segment in segments:
-                cleaned = segment.strip()
-                if cleaned:
-                    latex_lines.append(cleaned + r" \\\\[1ex]")
-            continue
-
-        if in_align:
-            latex_lines.append(r"\end{align*}")
-            in_align = False
-        if in_itemize:
-            latex_lines.append(r"\end{itemize}")
-            in_itemize = False
-
-        latex_lines.append(raw_line)
-
-    if in_align:
-        latex_lines.append(r"\end{align*}")
-    if in_itemize:
-        latex_lines.append(r"\end{itemize}")
-
-    return "\n".join(latex_lines)
-
 def ask_gpt(context, user_question):
     system_prompt = (
         "Du bist ein mathematischer Assistent. "
         "Extrahiere **alle mathematischen Formeln und vollständigen Rechenschritte** aus dem gegebenen Text. "
-        "Gib alle Schritte an, auch Zwischenrechnungen, Grenzwerte, Umformungen und alle Integrale. "
-        "Nutze `align*`-Umgebungen, um mehrzeilige Rechnungen darzustellen. "
-        "Kennzeichne jeden Titel von den Formeln mit Fettschrift (\\textbf{...}), sofern vorhanden. "
-        "Gib **nur die exakten Formeln und Herleitungen aus dem Kontext**. "
-        "Wenn du eine Gleichung schreibst, nicht nur Anfang und Endresultat, sondern die ganze Rechnung des Skripts. "
+        "Gruppiere die Ausgabe **nach Seitenzahlen** und verwende je Seite einen LaTeX-Abschnitt: \\\\subsection*{Seite XX}. "
+        "Nutze `align*`-Umgebungen für mehrzeilige Rechnungen und gib alle Gleichungen, Titel und Herleitungen vollständig wieder."
     )
     messages = [
         {"role": "system", "content": system_prompt},
@@ -140,60 +44,61 @@ def extract_page_range(frage: str):
 
 def main():
     fragen = [
-        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 77-78"
+        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 126-130",
+        "Extrahiere alle Formeln inklusive ihrer Titel aus Seite 131-135"
     ]
-
-    texts = []
-    pages = []
-    for filename in sorted(os.listdir(CHUNK_DIR)):
-        match = re.match(r"page_(\d{3})\.txt", filename)
-        if match:
-            page_num = int(match.group(1))
-            path = os.path.join(CHUNK_DIR, filename)
-            with open(path, "r", encoding="utf-8") as f:
-                content = f.read()
-                if content.strip():
-                    texts.append(content)
-                    pages.append(page_num)
 
     for frage in fragen:
         print(f"\nFrage: {frage}")
-        keyword = get_main_keyword(frage)
         seitenbereich = extract_page_range(frage)
-        print(f"Erkannter Seitenbereich: {seitenbereich}")
-
         if not seitenbereich:
-            print("Konnte Seitenbereich nicht erkennen.")
+            print("Seitenbereich nicht erkannt.")
             continue
 
-        chunks = [text for text, page in zip(texts, pages) if page in seitenbereich]
-        print(f"Chunks für Seitenbereich gefunden: {len(chunks)}")
+        context_blocks = []
+        for seite in seitenbereich:
+            filename = f"page_{seite:03}.txt"
+            filepath = os.path.join(CHUNK_DIR, filename)
 
-        if not chunks:
-            print("Keine passenden Chunks im gewünschten Seitenbereich gefunden.")
+            if not os.path.exists(filepath):
+                print(f"Seite {seite} nicht gefunden.")
+                continue
+
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read().strip()
+            if content:
+                context_blocks.append(f"Seite {seite}\n---\n{content}")
+
+        if not context_blocks:
+            print("Keine gültigen Seiteninhalte gefunden.")
             continue
 
-        context_text = "\n\n---\n\n".join(chunks)
-        antwort_roh = ask_gpt(context_text, frage)
-        antwort_latex = markdown_to_latex(antwort_roh)
+        gesamtkontext = "\n\n".join(context_blocks)
+        print("Sende gesamten Kontext an GPT...")
+        try:
+            antwort = ask_gpt(gesamtkontext, frage)
+            start, end = seitenbereich.start, seitenbereich.stop - 1
+            raw_output_path = os.path.join(OUTPUT_DIR, f"gpt_rohantwort_s{start}_s{end}.txt")
+            with open(raw_output_path, "w", encoding="utf-8") as f:
+                f.write(antwort)
+        except Exception as e:
+            print(f"Fehler bei GPT-Abfrage: {e}")
+            continue
 
-        seiten_suffix = f"_s{seitenbereich.start}_s{seitenbereich.stop - 1}"
-        filename = f"{keyword}{seiten_suffix}"
-
-        tex_path = os.path.join(OUTPUT_DIR, f"{filename}.tex")
-        pdf_path = os.path.join(OUTPUT_DIR, f"{filename}.pdf")
+        tex_path = os.path.join(OUTPUT_DIR, f"formelzusammenfassung_s{start}_s{end}.tex")
+        pdf_path = os.path.join(OUTPUT_DIR, f"formelzusammenfassung_s{start}_s{end}.pdf")
 
         with open(tex_path, "w", encoding="utf-8") as f:
-            f.write(r"\documentclass{article}" + "\n")
-            f.write(r"\usepackage[utf8]{inputenc}" + "\n")
-            f.write(r"\usepackage{amsmath,amssymb,amsthm}" + "\n")
-            f.write(r"\usepackage[a4paper,margin=2.5cm]{geometry}" + "\n")
-            f.write(r"\setlength{\mathindent}{0pt}" + "\n")
-            f.write(r"\sloppy" + "\n")
-            f.write(r"\begin{document}" + "\n\n")
-            f.write(r"\section*{" + filename.replace("_", " ").title() + "}" + "\n\n")
-            f.write(antwort_latex + "\n\n")
-            f.write(r"\end{document}")
+            f.write(r"\documentclass{article}\n")
+            f.write(r"\usepackage[utf8]{inputenc}\n")
+            f.write(r"\usepackage{amsmath,amssymb,amsthm}\n")
+            f.write(r"\usepackage[a4paper,margin=2.5cm]{geometry}\n")
+            f.write(r"\setlength{\parskip}{1ex}\n")
+            f.write(r"\setlength{\parindent}{0pt}\n")
+            f.write(r"\begin{document}\n\n")
+            f.write(rf"\section*{{Formelzusammenfassung Seiten {start}--{end}}}\n\n")
+            f.write(antwort)
+            f.write("\n\\end{document}")
 
         try:
             subprocess.run(["pdflatex", "-interaction=nonstopmode", tex_path], cwd=OUTPUT_DIR, check=True)
